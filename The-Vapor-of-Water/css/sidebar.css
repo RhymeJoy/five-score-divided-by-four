@@ -1,0 +1,228 @@
+/* 主體 */
+
+.sidebar {
+    background: linear-gradient(to right, rgb(224, 250, 255, 1) 0%, rgba(234, 253, 255, 0.9) 100%);
+    width: 17.5rem;
+    height: 100%;
+    position: fixed;
+    transition: transform 0.3s ease-out; /* 添加平滑過渡效果 */
+    transform: translateX(-100%);       /* 初始隱藏在左側 */
+    top: 0rem;
+    z-index: 4;
+}
+.sidebar.active {
+    transform: translateX(0);           /* 顯示時從左側滑入 */
+}
+.sidebar.dark {
+    background: linear-gradient(to right, rgb(22, 61, 85) 0%, rgba(22, 61, 85, 0.9) 100%);
+    transition: background-color 0.25s ease-in-out; 
+}
+.sidebar.dark.active {
+    transform: translateX(0);
+}
+.sidebar menu {
+    text-align: center;
+    padding: 0;
+    padding-right: 1em;
+    font-family: LXGW WenKai Mono TC;
+    font-size: 2rem;
+    font-weight: bold;
+    white-space: nowrap;
+    letter-spacing: 10px;
+    color: #000;
+}
+.sidebar menu.dark {
+    color: #eee;
+    transition: 0.15s ease-in-out;
+}
+.sidebar ul {
+    padding: 0em 1.25em;
+    list-style-type: none;
+    color: #823ed0;
+}
+.sidebar ul li {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.sidebar ul li a {
+    color: #823ed0;
+    width: 100%;            /* 設定固定寬度，根據需要調整 */
+    font-family: LXGW WenKai Mono TC;
+    font-size: 1.3rem;
+    margin-left: 1px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+.sidebar ul li a:hover {
+    color: #d7bf21;
+    text-decoration: underline;
+}
+
+.hamburger {
+    position: fixed;
+    top: 1rem;    /* 距離視窗頂部 */
+    left: 1rem;      /* 距離視窗左側 */
+    z-index: 10;     /* 確保按鈕位於其他元素上層 */
+    cursor: pointer; /* 鼠標指針變為點擊狀態 */
+    width: 1.5rem;   /* 按鈕寬度調小 */
+    height: 1.5rem;  /* 按鈕高度調小 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: none; /* 移除背景 */
+    border: none;     /* 移除邊框 */
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0em;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+.hamburger:hover {
+    background-color: rgba(134, 0, 0, 0.15);
+    border-radius: .5em;
+    transition: all 0.2s ease;
+}
+
+/* 按鈕的三條橫線 */
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 0.15rem;        /* 線條高度調小 */
+    background-color: black; /* 線條顏色 */
+    border-radius: 5px;      /* 線條圓角效果 */
+    transition: all 0.3s ease;
+}
+
+/* 按鈕被激活時的效果 */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(0.625rem) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    transform: scaleX(0.2);
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-0.625rem) rotate(-45deg);
+}
+
+/* slider */
+
+.slider-container {
+    position: absolute;    /* 使用絕對定位 */
+    bottom: 0;             /* 靠底部 */
+    left: 50%;             /* 水平置中 */
+    transform: translateX(-51%); /* 確保容器完全置中 */
+    width: 95%;           /* 滑桿容器寬度為 100% */
+    padding: 10px;         /* 可選：調整內邊距 */
+    text-align: center;    /* 讓標籤文字居中 */
+    background-color: rgba(0, 0, 0, 0.1); /* 背景顏色，透明黑 */
+}
+
+.slider {
+    width: 90%;
+    align-items: center;
+    margin-top: 0.9rem;
+}
+
+.scale-label {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* 按鈕 */
+
+#toggleOpacity {
+    position: fixed;
+    bottom: 1.5em;
+    width: 75%; 
+    left: 50%;            /* 水平位置設為50% */
+    transform: translateX(-50%); /* 從50%的位置偏移-50%以達到真正居中 */
+    padding: 0.5em 1.5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 3;
+    transition: 0.15s ease;
+}
+
+#toggleOpacity:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#toggleOpacity.dark {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #111;
+
+    transition: 0.15s ease;
+}
+#toggleOpacity:hover.dark {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 滾動條 */
+
+/* 滾動條的整體樣式 */
+::-webkit-scrollbar {
+    width: 15px; /* 滾動條寬度 */
+    background-color: #f4f4f4; /* 背景顏色 */
+}
+
+/* 滾動條的滑塊部分 */
+::-webkit-scrollbar-thumb {
+    background-color: #888; /* 滑塊顏色 */
+    border-radius: 8px; /* 圓角滑塊 */
+    border: 2px solid #f4f4f4; /* 外框，與背景融為一體 */
+}
+
+/* 滾動條滑塊在懸停時的效果 */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* 懸停變暗 */
+}
+
+/* 滾動條軌道（背景）的樣式 */
+::-webkit-scrollbar-track {
+    background-color: #dbf0f1; /* 滑塊背景顏色 */
+    border-radius: 6px; /* 滑塊圓角 */
+}
+
+@media screen and (max-width: 800px) {
+    ::-webkit-scrollbar {
+        width: 12px; /* 滾動條寬度 */
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 6px; /* 圓角滑塊 */
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    ::-webkit-scrollbar {
+        width: 18px; /* 滾動條寬度 */
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px; /* 圓角滑塊 */
+    }
+    .sidebar menu {
+        font-size: 2.75rem;
+        letter-spacing: 10px;
+    }
+    .sidebar ul li a {
+        font-size: 1.75rem;
+        margin-left: 1px;
+    }
+    .sidebar {
+        width: 22.5rem;
+    }
+    #toggleOpacity {
+        font-size: 1.25rem;
+    }
+    .hamburger {
+        transform: scale(1.4);
+    }
+}
