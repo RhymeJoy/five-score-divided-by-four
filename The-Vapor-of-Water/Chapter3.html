@@ -99,11 +99,11 @@
 
         <script>
 
-            // document.addEventListener('copy', function(e) {
-            //     e.preventDefault();
-            //     e.clipboardData.setData('text/plain', '');
-            //     alert('複製是被禁止的喔！你這個小調皮！');
-            // });
+            document.addEventListener('copy', function(e) {
+                e.preventDefault();
+                e.clipboardData.setData('text/plain', '');
+                alert('複製是被禁止的喔！你這個小調皮！');
+            });
 
             document.addEventListener('dragstart', function(e) {
                 e.preventDefault();
