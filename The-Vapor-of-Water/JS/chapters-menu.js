@@ -3,7 +3,7 @@ const chapters = [
     { title: "1.第一章：南港小馬展",        href: "Chapter1.html" },
     { title: "2.第二章：身世謎題[上]",      href: "Chapter2.html" },
     { title: "3.第三章：身世謎題[中]",      href: "Chapter3.html" },
-    { title: "4.第四章：身世謎題[下]",      href: "Chapter4.html" },
+    // { title: "4.第四章：身世謎題[下]",      href: "Chapter4.html" },
     // { title: "5.第五章：身世謎題[下]",      href: "Chapter5.html" },
     // { title: "6.第六章：身世謎題[下]",      href: "Chapter6.html" },
     // { title: "7.第七章：身世謎題[下]",      href: "Chapter7.html" },
