@@ -195,7 +195,6 @@
 /* 滾動條的整體樣式 */
 ::-webkit-scrollbar {
     width: 15px; /* 滾動條寬度 */
-    background-color: #f4f4f4; /* 背景顏色 */
 }
 
 /* 滾動條的滑塊部分 */
@@ -212,7 +211,7 @@
 
 /* 滾動條軌道（背景）的樣式 */
 ::-webkit-scrollbar-track {
-    background-color: #dbf0f1; /* 滑塊背景顏色 */
+    background-color: transparent;
     border-radius: 6px; /* 滑塊圓角 */
 }
 
