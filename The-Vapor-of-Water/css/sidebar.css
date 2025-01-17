@@ -195,10 +195,7 @@
 /* 滾動條的整體樣式 */
 ::-webkit-scrollbar {
     width: 15px; /* 滾動條寬度 */
-    position: fixed; /* 固定位置 */
-    right: 0; /* 靠右顯示 */
-    top: 0; /* 靠頂部顯示 */
-    height: 100%; /* 滾動條高度為頁面高度 */
+    background-color: #d6edec;
 }
 
 /* 滾動條的滑塊部分 */
