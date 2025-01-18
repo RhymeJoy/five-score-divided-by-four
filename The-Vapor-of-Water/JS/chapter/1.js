@@ -106,7 +106,7 @@ const title = document.querySelector('.title');
         "說不定還能夢到露娜公主...",
         "<div class='line'></div>",
         "<div style='margin-bottom: -0.5rem; font-weight: bold;'>備註：</div>",
-        "<div style='margin-bottom: -1.5rem;'>感謝友人提供自己的設定，給我做使用。腳色多了，靠自己想，腦袋會炸掉。</div>",
+        "<div style='margin-bottom: -1.5rem;'>感謝友人提供自己的設定，給我做使用。角色多了，靠自己想，腦袋會炸掉。</div>",
         "<div style='margin-bottom: -4rem;'>Radio Garden是一個外國網站，幾乎集合了全世界所有的電台頻道。電台還是真真實實在當地live，並不是預錄的。</div>",
     ];
 
