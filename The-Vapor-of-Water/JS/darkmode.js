@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleOpacity = document.querySelector('#toggleOpacity');
-    const elements = document.querySelectorAll('.img, .container, .sidebar, .sidebar menu, .navbar-black, .navbar-head, footer, .line');
+    const elements = document.querySelectorAll('.line-footer, .img, .container, .sidebar, .sidebar menu, .navbar-black, .navbar-head, footer, .line');
     const bodyElement = document.body;
 
     // 初始化模式
