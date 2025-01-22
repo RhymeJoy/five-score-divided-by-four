@@ -38,7 +38,7 @@ body {
     background-color: rgba(240, 255, 255, 0.85);
     color: #000;
     max-width: 75%;
-    padding: 5em 0em;
+    padding-top: 5em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     margin: auto;
     z-index: 2;
@@ -64,7 +64,7 @@ body {
     font-weight: 600;
     font-family: LXGW WenKai Mono TC;
     padding: 1em 0em;
-    margin-bottom: -2.25em;
+    margin: 0em;
     transition: 0.25s ease;
 }
 .container a{
@@ -98,6 +98,7 @@ body {
     font-size: 0.8em;
     font-weight: bold;
     text-align: center;
+    margin-top: -4.25em;
     margin-bottom: 5em;
 }
 .line {
@@ -112,6 +113,42 @@ body {
 .line.dark {
     background-color: #eee;
 }
+
+.line-footer {
+    height: 3px;
+    border-radius: 5px;
+    background-color: #333;
+    margin: 0 auto;
+    transition: 0.15s ease;
+    margin-top: 8rem;
+    width: 80%;
+}
+.line-footer.dark {
+    background-color: #eee;
+}
+.chapter-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+.nav-button {
+    padding: 10px 25px;
+    margin-top: 1.5em;
+    margin-bottom: -1.5em;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #1056a1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.25s;
+}
+
+.nav-button:hover {
+    background-color: #2272c7;
+}
+
 @media screen and (max-width: 400px) {
     .container p {
         font-size: 1.2rem;
@@ -125,7 +162,7 @@ body {
     }
     .title{
         font-size: 2rem;
-        margin-bottom: -1.5em;
+        margin: 0.5em 0em;
         padding: 0.5em 0em;
     }
     .container p {
@@ -147,13 +184,31 @@ body {
     }
     .preword{
         font-size: 0.85em;
-        margin-top: -2.25em;
+        margin-top: -3.25em;
     }
     .line {
         width: 90%;
         height: 2px;
         border-radius: 4px;
-        margin-top: 7.5rem
+        margin-top: 4rem
+    }
+    .line-footer {
+        height: 2.25px;
+        border-radius: 4px;
+        width: 95%;
+        margin-top: 6em;
+    }
+    .chapter-navigation {
+        width: 90%;
+        gap: 10px;
+    }
+    .nav-button {
+        padding: 9px 4.5px;
+        width: 100px;
+        gap: 15px;
+        margin-top: 2em;
+        margin-bottom: -2.5em;
+        font-size: 1rem;
     }
 }
 @media screen and (min-width: 2000px) {
@@ -162,7 +217,7 @@ body {
     }
     .title{
         font-size: 3.25rem;
-        margin-bottom: -2.25em;
+        margin-bottom: -0.25em;
         padding: 0.5em 0em;
     }
     .container p {
