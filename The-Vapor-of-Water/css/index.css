@@ -142,11 +142,16 @@ body {
     color: white;
     border: none;
     border-radius: 10px;
-    transition: background-color 0.25s;
+    transition: background-color 0.2s;
 }
 
 .nav-button:hover {
     background-color: #2272c7;
+}
+
+.nav-button:active {
+    background-color: #5922c7;
+    transition: background-color 0.1s;
 }
 
 @media screen and (max-width: 400px) {
