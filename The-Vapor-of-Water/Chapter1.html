@@ -50,7 +50,7 @@
             </nav>   
         </header>
     
-        <button id="toggleSidebar" class="hamburger">
+        <button class="hamburger toggleSidebar">
             <span></span>
             <span></span>
             <span></span>
@@ -66,12 +66,18 @@
         <img src="pic/vapor-trail-stream-wall.png" class="img" alt="SambaNeko">
         <div class="container">
             <div style="margin-top: 1.5em;" class="title">第一章<br>南港小馬展</div>
+            <div class='line-footer'></div>
+            <div class="chapter-navigation">
+                <button id="prevChapter" class="nav-button">上一章</button>
+                <button class="nav-button toggleSidebar">章節目錄</button>
+                <button id="nextChapter" class="nav-button">下一章</button>
+            </div>
         </div>
 
         <footer>
             <p>&copy; 2024-2025 欣韻 , All rights reserved.</p>
         </footer>
-        
+          
         <noscript>
             <style>
                 body {
@@ -90,7 +96,7 @@
                 </div>
             </div>
         </noscript>
-        
+
         <script src="JS/reload.js"></script>
         <script src="JS/chapter/1.js?v=010525"></script>
         <script src="JS/hamburger.js?v=010525" defer></script>
