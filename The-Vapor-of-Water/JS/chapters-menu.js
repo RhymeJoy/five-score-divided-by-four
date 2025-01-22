@@ -4,7 +4,7 @@ const chapters = [
     { title: "2.第二章：身世謎題[上]",      href: "Chapter2.html" },
     { title: "3.第三章：身世謎題[中]",      href: "Chapter3.html" },
     { title: "4.第四章：身世謎題[下]",      href: "Chapter4.html" },
-    // { title: "5.第五章：身世謎題[下]",      href: "Chapter5.html" },
+    { title: "5.第五章：異變日增[上]",      href: "Chapter5.html" },
     // { title: "6.第六章：身世謎題[下]",      href: "Chapter6.html" },
     // { title: "7.第七章：身世謎題[下]",      href: "Chapter7.html" },
     // { title: "8.第八章：身世謎題[下]",      href: "Chapter8.html" },
@@ -49,4 +49,37 @@ chapterLinks.forEach(link => {
         link.classList.add('selected'); // 為當前頁面對應的鏈接添加選中樣式
     }
 });
-        
+
+
+
+// 選取上一章和下一章按鈕
+const prevButton = document.getElementById('prevChapter');
+const nextButton = document.getElementById('nextChapter');
+
+// 找到當前章節的索引
+const currentChapterIndex = chapters.findIndex(chapter => chapter.href === currentPath);
+
+// 設置按鈕的跳轉邏輯和顯示狀態
+if (currentChapterIndex > 0) {
+    // 當前章節不是第一章時，設定上一章按鈕的行為
+    prevButton.onclick = () => {
+        window.location.href = chapters[currentChapterIndex - 1].href;
+    };
+    prevButton.style.visibility = 'visible';  // 顯示上一章按鈕
+} else {
+    // 如果是第一章，隱藏「上一章」按鈕
+    prevButton.style.visibility = 'hidden';
+}
+
+if (currentChapterIndex < chapters.length - 1) {
+    // 當前章節不是最後一章時，設定下一章按鈕的行為
+    nextButton.onclick = () => {
+        window.location.href = chapters[currentChapterIndex + 1].href;
+    };
+    nextButton.style.visibility = 'visible'; // 顯示下一章按鈕
+} else {
+    // 如果是最後一章，隱藏「下一章」按鈕
+    nextButton.style.visibility = 'hidden';
+}
+
+
