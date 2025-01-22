@@ -105,7 +105,7 @@ const title = document.querySelector('.title');
         "今天整整一天，我們都過得格外開心，讓人捨不得結束。然而，時間不會為我們停留，我只能期待明天的馬展帶來更多驚喜。看了看時間，已經不早了！於是，我和欣韻洗漱完後，便相擁而眠，帶著滿滿的回憶與期待，沉入甜美的夢鄉。",
         "說不定還能夢到露娜公主...",
         "<div class='line'></div>",
-        "<div style='margin-bottom: -0.5rem; font-weight: bold;'>備註：</div>",
+        "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -1.5rem;'>感謝友人提供自己的設定，給我做使用。角色多了，靠自己想，腦袋會炸掉。</div>",
         "<div style='margin-bottom: -4rem;'>Radio Garden是一個外國網站，幾乎集合了全世界所有的電台頻道。電台還是真真實實在當地live，並不是預錄的。</div>",
     ];

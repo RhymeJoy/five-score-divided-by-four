@@ -4,7 +4,7 @@ const title = document.querySelector('.title');
     const paragraphs = [
         "<div class='preword'>到底是誰在惡作劇！</div>",
 
-        "<div style='text-align: center; margin-top: 5em'>***+🌛o0o🌜+***</div>",
+        "<div style='text-align: center;'>***+🌛o0o🌜+***</div>",
 
         "<div style='text-align: center; margin: -1em 0em'>[水蒸氣視角]</div>",
         "我全身多處擦傷，右蹄扶著流血的左蹄。破空就在我旁邊，情況也沒好到哪裡。我們倆坐在這大石碎塊堆砌的掩體後方，稍作休息地喘口氣。剛剛要不是他幫忙拉開我，我可能就會跟其他小馬一樣蒸發不見了！",
@@ -176,7 +176,7 @@ const title = document.querySelector('.title');
         "我低頭順勢接過剩下的食材，心裡暗自祈禱帽子沒有鬆動，僅憑這麼一個微小的偽裝，希望能撐過這場“特別的日子”。",
 
         "<div class='line'></div>",
-        "<div style='margin-bottom: -0.5rem; font-weight: bold;'>備註：</div>",
+        "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -1.5rem;'>破空為Sky Stinger的譯名。</div>",
         "<div style='margin-bottom: -1.5rem;'>蒸氣或水蒸氣為Vapor Trail的譯名。</div>",
         "<div style='margin-bottom: -4rem;'>所有跟人有關的詞都替換成跟馬有關。比如：棘手→棘蹄、煩人→煩馬、驚人→驚馬、等等...</div>",

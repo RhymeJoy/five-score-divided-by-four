@@ -143,7 +143,7 @@ const title = document.querySelector('.title');
         "我們閉上眼，讓自己的呼吸逐漸放慢，最終進入了夢鄉。",
         
         "<div class='line'></div>",
-        "<div style='margin-bottom: -1rem; font-weight: bold;'>備註：</div>",
+        "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -4rem;'>向家人甚至是父母坦白，是一個莫大的挑戰，至少主角們已經跨過那道檻了！</div>",
     ];
 
