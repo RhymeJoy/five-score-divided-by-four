@@ -52,7 +52,7 @@ body {
     transition: 0.2s ease-in-out;
 }
 .container p {
-    min-height: 2em;
+    min-height: 1em;
     text-align: justify;
     font-size: 1.75rem;
     font-family: LXGW WenKai Mono TC;
@@ -125,7 +125,6 @@ body {
     transition: 0.15s ease;
     margin-top: 8rem;
     width: 80%;
-    margin-top: -4.5rem;
 }
 .line-footer.dark {
     background-color: #eee;
@@ -138,7 +137,8 @@ body {
 }
 .nav-button {
     padding: 10px 25px;
-    margin-top: 3em;
+    margin-top: 1.5em;
+    margin-bottom: -1.5em;
     font-size: 1.5rem;
     cursor: pointer;
     background-color: #1056a1;
