@@ -104,10 +104,11 @@ const title = document.querySelector('.title');
         "等大家都吃得心滿意足後，我們繞到了夜市附近的一間糕點店。環顧冷藏架上的蛋糕時，我的目光一下子被一款小馬主題的蛋糕吸引住了。這蛋糕不僅設計精緻，大小也剛好，足夠我們所有人共享。結完帳後，我們帶著蛋糕回到酒店房間，和大家一起等待12點的到來後慶生，整個夜晚笑聲和歡樂充滿了整個房間。",
         "今天整整一天，我們都過得格外開心，讓人捨不得結束。然而，時間不會為我們停留，我只能期待明天的馬展帶來更多驚喜。看了看時間，已經不早了！於是，我和欣韻洗漱完後，便相擁而眠，帶著滿滿的回憶與期待，沉入甜美的夢鄉。",
         "說不定還能夢到露娜公主...",
+        
         "<div class='line'></div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
-        "<div style='margin-bottom: -1.5rem;'>感謝友人提供自己的設定，給我做使用。角色多了，靠自己想，腦袋會炸掉。</div>",
-        "<div style='margin-bottom: -4rem;'>Radio Garden是一個外國網站，幾乎集合了全世界所有的電台頻道。電台還是真真實實在當地live，並不是預錄的。</div>",
+        "<div style='margin-bottom: -1.5rem;'>1. 感謝友人提供自己的設定，給我做使用。角色多了，靠自己想，腦袋會炸掉。</div>",
+        "<div style='margin-bottom: -4rem;'>2. Radio Garden是一個外國網站，幾乎集合了全世界所有的電台頻道。電台還是真真實實在當地live，並不是預錄的。</div>",
     ];
 
     paragraphs.reverse().forEach(text => {

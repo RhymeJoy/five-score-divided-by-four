@@ -5,7 +5,7 @@ const chapters = [
     { title: "3.第三章：身世謎題[中]",      href: "Chapter3.html" },
     { title: "4.第四章：身世謎題[下]",      href: "Chapter4.html" },
     { title: "5.第五章：異變日增[上]",      href: "Chapter5.html" },
-    // { title: "6.第六章：身世謎題[下]",      href: "Chapter6.html" },
+    { title: "6.第六章：異變日增[下]",      href: "Chapter6.html" },
     // { title: "7.第七章：身世謎題[下]",      href: "Chapter7.html" },
     // { title: "8.第八章：身世謎題[下]",      href: "Chapter8.html" },
     // { title: "9.第九章：身世謎題[下]",      href: "Chapter9.html" },
@@ -51,7 +51,6 @@ chapterLinks.forEach(link => {
 });
 
 
-
 // 選取上一章和下一章按鈕
 const prevButton = document.getElementById('prevChapter');
 const nextButton = document.getElementById('nextChapter');
@@ -82,4 +81,13 @@ if (currentChapterIndex < chapters.length - 1) {
     nextButton.style.visibility = 'hidden';
 }
 
+// footer
 
+const footer = document.createElement('footer');
+
+const paragraph = document.createElement('p');
+paragraph.innerHTML = '&copy; 2024-2025 欣韻 , All rights reserved.';
+
+footer.appendChild(paragraph);
+
+document.body.appendChild(footer);

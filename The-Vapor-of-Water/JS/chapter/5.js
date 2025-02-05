@@ -177,7 +177,7 @@ const title = document.querySelector('.title');
 
         "<div class='line'></div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
-        "<div style='margin-bottom: -4rem;'>夢想天馬是我成立的一個工作室，要叫它公司也行。主要是在做動畫部分的接案，2D和3D都有，偶爾接個平面設計也行。</div>",
+        "<div style='margin-bottom: -4rem;'>1. 夢想天馬是我成立的一個工作室，要叫它公司也行。主要是在做動畫部分的接案，2D和3D都有，偶爾接個平面設計也行。</div>",
     ];
 
     paragraphs.reverse().forEach(text => {

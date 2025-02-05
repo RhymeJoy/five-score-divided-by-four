@@ -177,9 +177,9 @@ const title = document.querySelector('.title');
 
         "<div class='line'></div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
-        "<div style='margin-bottom: -1.5rem;'>破空為Sky Stinger的譯名。</div>",
-        "<div style='margin-bottom: -1.5rem;'>蒸氣或水蒸氣為Vapor Trail的譯名。</div>",
-        "<div style='margin-bottom: -4rem;'>所有跟人有關的詞都替換成跟馬有關。比如：棘手→棘蹄、煩人→煩馬、驚人→驚馬、等等...</div>",
+        "<div style='margin-bottom: -1.5rem;'>1. 破空為Sky Stinger的譯名。</div>",
+        "<div style='margin-bottom: -1.5rem;'>2. 蒸氣或水蒸氣為Vapor Trail的譯名。</div>",
+        "<div style='margin-bottom: -4rem;'>3. 所有跟人有關的詞都替換成跟馬有關。比如：棘手→棘蹄、煩人→煩馬、驚人→驚馬、等等...</div>",
     ];
 
     paragraphs.reverse().forEach(text => {

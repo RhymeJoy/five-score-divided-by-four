@@ -133,7 +133,7 @@ const title = document.querySelector('.title');
         
         "<div class='line'></div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
-        "<div style='margin-bottom: -4rem;'>第一天：可愛標誌、髮色、小馬耳朵、尾巴？</div>",
+        "<div style='margin-bottom: -4rem;'>1. 第一天：可愛標誌、髮色、小馬耳朵、尾巴？</div>",
     ];
 
     paragraphs.reverse().forEach(text => {
