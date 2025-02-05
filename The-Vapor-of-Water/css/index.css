@@ -101,7 +101,7 @@ body {
     font-size: 0.8em;
     font-weight: bold;
     text-align: center;
-    margin-top: -4.25em;
+    margin-top: -4.4em;
     margin-bottom: 5em;
 }
 .line {
@@ -248,7 +248,7 @@ body {
     }
     .preword{
         font-size: 0.8em;
-        margin-top: -2.5em;
+        margin-top: -4.25em;
     }
     .line {
         width: 100%;
