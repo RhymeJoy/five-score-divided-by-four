@@ -187,7 +187,7 @@ const title = document.querySelector('.title');
 
         "<div class='line'></div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
-        "<div style='margin-bottom: -4rem;'>1. 如果雙發飛機從台中（RMQ）飛往溫哥華（YVR），並在日本羽田（HND）與阿拉斯加（安克雷奇 ANC）分別加油，則總飛行時間會受到航線、加油時間、天氣等因素影響。<br><br>純飛行時間約 11 小時！<br>加油與地勤處理時間約 3 小時！<br>總旅行時間（不含其他延誤）：約 14 小時！</div>",
+        "<div style='margin-bottom: -4rem;'>1. 如果雙發飛機從台灣（台中/RMQ）飛往加拿大（溫哥華/YVR），並在日本（羽田/HND）與阿拉斯加（安克雷奇/ANC）分別加油，則總飛行時間會受到航線、加油時間、天氣等因素影響。<br><br>純飛行時間約 11 小時！<br>加油與地勤處理時間約 3 小時！<br>總旅行時間（不含其他延誤）：約 14 小時！</div>",
     ];
 
     paragraphs.reverse().forEach(text => {
