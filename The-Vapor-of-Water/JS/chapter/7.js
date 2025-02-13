@@ -12,7 +12,7 @@ const title = document.querySelector('.title');
         "欣韻則是愣了幾秒，然後用手肘輕輕戳了戳我的手臂，小聲說道：“我覺得我們可能不只是搭了一輛禮車，這根本是踏進了另一個世界吧？”",
         "“說不定我們這趟旅程的奢華程度會超過想像。”我苦笑著說，然後在夢瑄的催促下，我們紛紛上了車。",
                                   
-        "<div style='text-align: center; line-height: 9em;'>***-－oOo－-***</div>",
+        "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
         "讓我驚訝的是，他的私人直升機起降場竟然離我家不遠，就位在燕巢區阿公店水庫附近。與其說是正式的起降場，倒不如說是專屬的私人停機坪——而且就設置在他的別墅內。",
         "當我們的加長禮車駛入這片私人領地時，第一眼映入眼簾的就是一棟氣派非凡的別墅，歐式風格的建築設計搭配大片落地窗，在夜色下散發著低調卻難以忽視的奢華感。別墅周圍是一片精心修剪的綠地與庭院，草坪邊緣甚至還擺放著幾座雕像與噴泉，彷彿進入了某位貴族的莊園。",
@@ -69,7 +69,7 @@ const title = document.querySelector('.title');
         "直到機身微微一震，駕駛員沉穩地開口：“各位，我們要降落了。”",
         "這句話打破了沉默，大家才猛然回過神來，準備迎接降落後的下一步行動。",
                                           
-        "<div style='text-align: center; line-height: 9em;'>***-－oOo－-***</div>",
+        "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
         "就在我們感覺到機身再次微微一震，準備降落時，夢瑄的朋友突然轉過頭來，面帶認真地問道：“接下來的航程，距離有足足9700公里，除了之前提過的小型雙發飛機，我這裡還有一架長程四發飛機可供選擇。你們有偏好嗎？””",
         "我馬上提問，語氣急迫：“差在哪裡？哪個更適合我們現在的情況？”",
@@ -96,7 +96,7 @@ const title = document.querySelector('.title');
         "雷飛輕笑道：“但如果能吃點好東西，也許能讓這段旅程輕鬆點吧！”",
         "夢瑄則是得意地眨了眨眼睛：“放心，我不會忘記我們的主要目標，但偶爾放鬆一下，總能讓心情更好，對不對？”",
                                                   
-        "<div style='text-align: center; line-height: 9em;'>***-－oOo－-***</div>",
+        "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
         "“好了，接下來的14個鐘頭都要卡在飛機上了！”我抱怨道，望著窗外逐漸變小的地面。雙發引擎的轟隆聲在機艙中回響，仿佛提醒著我，這場長途跋涉才剛開始。",
         "“各位先生女士，機上有搭載WIFI，如果感到無聊，歡迎使用。”夢瑄的朋友從機長室廣播，語氣輕松，彷彿完全不在意這一場如此長時間的飛行。",
@@ -187,7 +187,7 @@ const title = document.querySelector('.title');
 
         "<div class='line'></div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
-        "<div style='margin-bottom: -4rem;'>1. 如果雙發飛機從台灣（台中/RMQ）飛往加拿大（溫哥華/YVR），並在日本（羽田/HND）與阿拉斯加（安克雷奇/ANC）分別加油，則總飛行時間會受到航線、加油時間、天氣等因素影響。<br><br>純飛行時間約 11 小時！<br>加油與地勤處理時間約 3 小時！<br>總旅行時間（不含其他延誤）：約 14 小時！</div>",
+        "<div style='margin-bottom: -4rem;'>1. 如果雙發飛機從台灣（台中/RMQ）飛往加拿大（溫哥華/YVR），並在日本（羽田/HND）與阿拉斯加（安克雷奇/ANC）分別加油，則總飛行時間會受到航線、加油時間、天氣等因素影響。<br><br>純飛行時間：約 11 小時！<br>加油與地勤處理時間：約 3 小時！<br>總旅行時間（不含其他延誤）：約 14 小時！</div>",
     ];
 
     paragraphs.reverse().forEach(text => {

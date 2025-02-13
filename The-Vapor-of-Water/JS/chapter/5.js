@@ -4,7 +4,7 @@ const title = document.querySelector('.title');
     const paragraphs = [
         "<div class='preword'>夢想成真了，我該怎麼辦？</div>",
 
-        "<div style='text-align: center;'>***+🌛o0o🌜+***</div>",
+        "<div style='text-align: center; white-space: nowrap; overflow: hidden;'>***+🌛o0o🌜+***</div>",
 
         "<div style='text-align: center; margin: -1em 0em'>[水蒸氣視角]</div>",
         "“天翼，這望遠鏡給妳，妳過來幫我留意一下遠處的據點，剛剛那邊發生的爆炸讓我很在意。”我將望遠鏡遞給天翼，語氣不容置疑，神色顯得比平常更加嚴肅。",
@@ -46,7 +46,7 @@ const title = document.querySelector('.title');
         "她的語氣急切，語音顫抖，彷彿在每一個字裡都隱藏著無窮的恐懼。她的眼神中透露出一種深深的懇求，像是唯一的希望，卻又極為脆弱。",
         "“拜託，你得幫幫我，我時間不多了！”",
 
-        "<div style='text-align: center; margin-bottom: 5rem; line-height: 7.5em;'>***-🌜o0o🌛-***</div>",
+        "<div style='text-align: center; margin-bottom: 5rem; line-height: 7.5em; white-space: nowrap; overflow: hidden;'>***-🌜o0o🌛-***</div>",
         
         "“我的天啊！這絕對是我連續兩天做過最驚險的夢了！”",
         "我猛地驚醒，心跳還在急促地跳動，額頭上滲出一層冷汗。四周的寂靜讓我不禁懷疑剛剛經歷的種種到底是真實還是只是夢境。",
@@ -66,7 +66,7 @@ const title = document.querySelector('.title');
         "“真的是我的...”我低聲喃喃，伸手輕觸那柔軟的毛髮。觸感溫暖而真實，讓我無法再逃避眼前的現實。尾巴隨著我的手指擺動著，像是有了自己的生命。",
         "我靠著洗手台，深吸一口氣，努力讓自己冷靜下來。但無論如何，我已經知道，無論接下來發生什麼，我都必須面對這一切，逃避只會讓事情變得更糟。",
                   
-        "<div style='text-align: center; line-height: 9em;'>***-－oOo－-***</div>",
+        "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
         "我腳步輕輕地走下樓，還沒到客廳，就聽見電視的聲音傳來。原本以為大家都還在睡，沒想到居然有人比我起得更早。",
         "細聽了一下，電視裡的聲音頓時讓我感到既熟悉又驚訝——這不是M6主角的聲音嘛！我瞬間停下腳步，內心湧起一絲好奇和莫名的不安。是誰這麼早起來，還在看這個？",
@@ -105,7 +105,7 @@ const title = document.querySelector('.title');
         "“對，時間會讓一切變得清晰。”欣韻輕聲應道，語氣中帶著一絲淡淡的希望和理解，“無論發生什麼，至少我們是一起面對的。”",
         "“嗯，大家一起努力，”我輕聲回應道，“我們可以找到方法的。”這句話說出來時，我也在心底默默地希望，這份團結和勇氣能夠幫助我們克服眼前的困難。",
                           
-        "<div style='text-align: center; line-height: 9em;'>***-－oOo－-***</div>",
+        "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
         "“讓我確認一下，”我媽皺著眉，語氣中帶著一絲難以置信，“你身體目前頭頂長了小馬耳朵，替換原本地耳朵；屁股長了尾巴，和那個什麼可愛標誌，對吧？”她的語氣既小心又困惑。",
         "聲音雖然穩定，但能感覺到她正在努力消化這些荒誕的現實。一邊說著，她的目光在我的耳朵和尾巴之間來回移動，試圖讓自己相信這一切是真的，而不僅僅是她的幻覺。",
@@ -131,7 +131,7 @@ const title = document.querySelector('.title');
         "“你們放心，我會照顧好自己。”我說，語氣輕柔但堅定。",
         "推開門，清晨的陽光灑在我的臉上，微風輕拂而過。我深吸了一口氣，心中默默告訴自己，無論未來會發生什麼，我都必須迎難而上，因為這不僅是對家人的承諾，更是對自己的責任。",
                                   
-        "<div style='text-align: center; line-height: 9em;'>***-－oOo－-***</div>",
+        "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
         "就這樣，我在夢想天馬度過了一個忙碌的上午，專注於繪製故事板。這段時間裡，周圍的一切都變得模糊，只有眼前的畫板和那些未完成的線條充滿了我的世界。",
         "直到一聲敲門聲響起，打破了這片寧靜，把我從創作的專注中拉回現實。我抬起頭，愣了一下，眼睛眨了眨，才意識到自己的肩膀有些僵硬，手腕微微酸疼。",
@@ -151,7 +151,7 @@ const title = document.querySelector('.title');
         "“真的是夢境成真了嗎？”我低語自語，似乎有些不敢接受這個現實。目光再次落在鏡中的自己，眼中那異常的瞳色讓我更加不確定這一切到底是夢還是現實。",
         "我心跳加速，猶豫不決地看著辦公室裡的一切。工作似乎並不重要了，這些突如其來的變化讓我無法集中精力。想了想，我最終決定：“我還是回家吧，這樣的狀況在外面真的是快要藏不住了。”",
                                           
-        "<div style='text-align: center; line-height: 9em;'>***-－oOo－-***</div>",
+        "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
         "一推開門，果然不出所料，客廳裡傳來了熟悉的動畫聲音，輕快的配樂和角色的對話讓空氣中彷彿充滿了活力。我輕輕搖頭，心想：“果然，這小馬的毒一旦沾上，沒人能逃得掉。”不過我也只能無奈地笑了笑，畢竟我自己不也是這樣被牽引進來的？",
         "我走進客廳，看到我妹和欣韻正坐在沙發上，雙眼緊盯著螢幕，完全沉浸在那個五彩斑斕的世界裡，彷彿一切現實的困惑都已被拋在了腦後。她們看見我進來，略顯尷尬地停下了手中的零食，抬頭看了我一眼，似乎有點不好意思。",
