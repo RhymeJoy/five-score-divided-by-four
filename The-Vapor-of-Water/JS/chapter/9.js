@@ -181,23 +181,6 @@ const title = document.querySelector('.title');
         "<div style='margin-bottom: -4rem;'>1. Cinesite Vancouver：匯集了世界領先的視覺效果和動畫工作室。憑藉一些最具標誌性的電影時刻,該集團是全球最熱門的生產和返利地點的行業領先人才和技術的強國。<br><br>地址位於加拿大不列顛哥倫比亞省溫哥華市大北道565號500單元。落在溫哥華市的東南部，屬於Mount Pleasant區域。<br><br>該地區以其多元文化和創意產業而聞名，擁有眾多藝術畫廊、咖啡館和餐廳。此外也靠近溫哥華的主要交通樞紐，方便前往市中心和國際機場或其他地區。</div>",
     ];
 
-    //  人名 =    Name          Sex         Birth       Species         Parents         relative
-    // 林欣韻 = Vapor Trail     MARE        5/3         PONY    P       志邦/慧雯  ↢↣   父母
-    // 黃銀錦 = Sky Stinger     STALLION    5/3         PONY    P       建德/雅琳  ↢↣   父母
-    // 黃夢瑄 =                                         HUMAN                           銀錦妹妹
-    // 林黎温 =                                         HUMAN                           欣韻哥哥
-    // 小〇瑞 =                                         HUMAN
-    // 孫綿絨 =                                         HUMAN
-    // 王宗泰 = Grey Scale      MARE        5/7         PONY    U
-    // 張雷飛 = Neddle Stitch   MARE        5/3         PONY    E
-    // 李詩涵 = cheese sandwich STALLION    5/11        PONY
-    // 歐瑞斯 = Angel Wings     MARE        5/21        PONY    U
-    // 緬因貓 = 棉花            Girl        6/1         MANTICORE 
-
-    //第一天：可愛標誌、髮色、耳朵、尾巴
-    //第二天：瞳色、身體變矮、腳踝拉高、手腳扁寬並開始合併、聲音變高
-    //第三天：性轉、正常小馬身高、前後蹄子長出、種族特徵完全長出(翅膀、獨角)、變女聲
-
     paragraphs.reverse().forEach(text => {
         const paragraph = document.createElement('p');
         paragraph.innerHTML = text;
