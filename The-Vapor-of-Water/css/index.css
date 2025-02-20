@@ -117,6 +117,10 @@ body {
     color: rgb(69, 205, 255);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
+.dark .container a:hover{
+    color: rgb(69, 205, 255);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
 .directions{
     font-size: 1.5em;
     text-align: justify;
@@ -162,22 +166,28 @@ body {
 .line-footer.dark {
     background-color: #eee;
 }
+
+/* 章節調整按鈕 */
+
 .chapter-navigation {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
+    gap: 15px;
 }
 .nav-button {
-    padding: 10px 25px;
+    padding: 10px 15px;
     margin-top: 3em;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     cursor: pointer;
     background-color: #1056a1;
     color: white;
     border: none;
     border-radius: 10px;
     transition: background-color 0.2s;
+    width: 160px;
+    margin-bottom: -0.5em;
 }
 
 .nav-button:hover {
@@ -246,8 +256,7 @@ body {
     }
     .nav-button {
         padding: 9px 4.5px;
-        width: 100px;
-        gap: 15px;
+        width: 110px;
         margin-top: 2em;
         margin-bottom: -2.5em;
         font-size: 1rem;
@@ -281,6 +290,7 @@ body {
     .directions{
         font-size: 1.95em;
         margin: 0em 2em;
+        margin-top: 0.75em;
     }
     .warning{
         font-size: 1.9em;
@@ -295,6 +305,17 @@ body {
         height: 3px;
         border-radius: 6px;
         margin-top: 10rem
+    }
+    .chapter-navigation {
+        width: 70%;
+        gap: 30px;
+    }
+    .nav-button {
+        padding: 15px 20px;
+        width: 220px;
+        margin-top: 3em;
+        margin-bottom: 0.5em;
+        font-size: 1.75rem;
     }
     .vapor a:hover img {
         transform: scale(1.05) translateY(-15px);
