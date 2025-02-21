@@ -199,7 +199,7 @@ const title = document.querySelector('.title');
         "<div style='margin-bottom: -1.5rem;'>3. 51區：位於內華達州南部，距拉斯維加斯西北偏北83英里（134公里），是對美國空軍設於內華達州試驗場內的保密設施的統稱。傳說這是美國政府對墜毀的外星人飛船進行試驗的地方。一直是許多UFO迷嚮往的神秘地。</div>",
         "<div style='margin-bottom: -1.5rem;'>4. 溫帶海洋氣候：溫哥華屬於溫帶海洋性氣候，氣候溫和，四季宜人，全年都適合旅遊。市內草地常綠、繁花似錦。冬季少下雪，但雨水充沛，有“加拿大雨都”之稱。這也是文章內為何提到路面是濕滑的原因。</div>",
         "<div style='margin-bottom: -1.5rem;'>5. Avis Car Rental：是加拿大第4大的租車公司，與Budget同屬一間母公司。全球也有分布很多據點分店。</div>",
-        "<div style='margin-bottom: -4rem;'>6. eSim卡：這是符合業界標準的數位無實體SIM卡，可讓你啟用電信業者的行動方案，而不需要使用實體SIM卡。到國外就不用再租笨重的WiFi分享器，再有支援的國家就可以直接暢遊網路，及撥號。</div>",
+        "<div style='margin-bottom: -4rem;'>6. eSim卡：這是符合業界標準的數位無實體SIM卡，可讓你啟用電信業者的行動方案，而不需要使用實體SIM卡。到國外就不用再租笨重的WiFi分享器，只要在有支援的國家就可以直接暢遊網路，及撥號。</div>",
     ];
 
     //  人名 =    Name          Sex         Birth       Species         Parents         relative
