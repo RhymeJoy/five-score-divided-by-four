@@ -202,23 +202,6 @@ const title = document.querySelector('.title');
         "<div style='margin-bottom: -4rem;'>6. eSim卡：這是符合業界標準的數位無實體SIM卡，可讓你啟用電信業者的行動方案，而不需要使用實體SIM卡。到國外就不用再租笨重的WiFi分享器，只要在有支援的國家就可以直接暢遊網路，及撥號。</div>",
     ];
 
-    //  人名 =    Name          Sex         Birth       Species         Parents         relative
-    // 林欣韻 = Vapor Trail     MARE        5/3         PONY    P       志邦/慧雯  ↢↣   父母
-    // 黃銀錦 = Sky Stinger     STALLION    5/3         PONY    P       建德/雅琳  ↢↣   父母
-    // 黃夢瑄 =                                         HUMAN                           銀錦妹妹
-    // 林黎温 =                                         HUMAN                           欣韻哥哥
-    // 小〇瑞 =                                         HUMAN
-    // 孫綿絨 =                                         HUMAN
-    // 王宗泰 = Grey Scale      MARE        5/7         PONY    U
-    // 張雷飛 = Neddle Stitch   MARE        5/3         PONY    E
-    // 李詩涵 =                 STALLION    5/11        PONY
-    // 歐瑞斯 = Angel Wings     MARE        5/21        PONY    U
-    // 緬因貓 = 棉花            Girl        6/1         MANTICORE 
-
-    //第一天：可愛標誌、髮色、耳朵、尾巴
-    //第二天：瞳色、身體變矮、腳踝拉高、手腳扁寬並開始合併、聲音變高
-    //第三天：性轉、正常小馬身高、前後蹄子長出、種族特徵完全長出(翅膀、獨角)、變女聲
-
     paragraphs.reverse().forEach(text => {
         const paragraph = document.createElement('p');
         paragraph.innerHTML = text;
