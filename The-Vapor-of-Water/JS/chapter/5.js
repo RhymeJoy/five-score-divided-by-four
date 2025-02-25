@@ -6,7 +6,7 @@ const title = document.querySelector('.title');
 
         "<div style='text-align: center; white-space: nowrap; overflow: hidden;'>***+🌛o0o🌜+***</div>",
 
-        "<div style='text-align: center; margin: -1em 0em'>[水蒸氣視角]</div>",
+        "<div style='text-align: center; margin: -1em 0em;'>[水蒸氣視角]</div>",
         "“天翼，這望遠鏡給妳，妳過來幫我留意一下遠處的據點，剛剛那邊發生的爆炸讓我很在意。”我將望遠鏡遞給天翼，語氣不容置疑，神色顯得比平常更加嚴肅。",
         "天翼接過望遠鏡，立刻站到高處開始觀察，她那專注的眼神讓我對她的執行力感到放心。",
         "自從上週接到閃塵指揮官的命令後，我的小隊便馬不停蹄地開始在這片被無序踐踏的土地上執行援助任務。一個接一個的村莊、一片又一片的農田，全都被混沌的力量摧殘得面目全非。我們救助了許多驚慌失措的小馬，但這些毀滅性的景象不禁讓我們每個隊員心生無力感。",

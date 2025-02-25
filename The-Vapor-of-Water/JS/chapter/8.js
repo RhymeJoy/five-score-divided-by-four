@@ -6,7 +6,7 @@ const title = document.querySelector('.title');
 
         "<div style='text-align: center; white-space: nowrap; overflow: hidden;'>***+🌛o0o🌜+***</div>",
 
-        "<div style='text-align: center; margin: -1em 0em'>[水蒸氣視角]</div>",
+        "<div style='text-align: center; margin: -1em 0em;'>[水蒸氣視角]</div>",
         "“閃塵隊長，聽說你找我嗎？”我一邊立正敬禮，一邊詢問道，語氣中帶著幾分疑惑與敬意。",
         "閃塵站在戰術桌前，琥珀色的眼眸在地圖與情報文件間游移，像是在思考著什麼重大決策。他抬起頭，嘴角微微上揚，眼神中閃過一絲深思後的堅定。",
         "“沒錯，蒸氣上士。”閃塵隊長簡短地回應，隨後示意我稍微放鬆，接著說道：“我需要你和你的隊友組成一支搜救小隊，前往執行救難任務。",
@@ -137,7 +137,7 @@ const title = document.querySelector('.title');
                 
         "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
-        "<div style='text-align: center; margin-bottom: -1em'>[破空視角]</div>",
+        "<div style='text-align: center; margin-bottom: -1em;'>[破空視角]</div>",
 
         "熟睡的我突然被一陣震耳欲聾的聲音驚醒，雖然全身疲憊無力，但我仍強迫自己爬了起來，想弄清楚究竟發生了什麼事情。",
         "聲音穿過走廊，我聽見了一聲熟悉的命令：“所有小馬集合！我要求每一位小馬立刻到大廳集合，緊急事件！”這聲音慌亂而急迫，讓我心頭一緊。",
@@ -154,7 +154,7 @@ const title = document.querySelector('.title');
                         
         "<div style='text-align: center; line-height: 9em; white-space: nowrap; overflow: hidden;'>***-－oOo－-***</div>",
 
-        "<div style='text-align: center; margin-bottom: -1em'>[水蒸氣視角]</div>",
+        "<div style='text-align: center; margin-bottom: -1em;'>[水蒸氣視角]</div>",
 
         "我迅速環顧四周，發現自己身處於一個完全陌生且無法言喻的空間。四周似乎無邊無際，空氣中充滿著一種讓人無法忍受的壓迫感，彷彿每個呼吸都變得異常沉重。景象並不真實，空間彷彿隨時在扭曲，像是被某種無形的力量操控著。“這裡是哪裡？”",
         "無序露出一個充滿威脅的笑容。“我的渾沌空間，我們來玩個遊戲吧！贏了就可以離開，輸了...”他的聲音再次傳來，帶著那股邪惡的嘲笑。",
