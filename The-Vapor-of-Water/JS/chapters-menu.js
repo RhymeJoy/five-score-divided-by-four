@@ -12,7 +12,7 @@ const chapters = [
     { title: "第十章：非法入境",          href: "Chapter10.html" },
     { title: "第十一章：短暫的休憩",      href: "Chapter11.html" },
     { title: "第十二章：重拾記憶",        href: "Chapter12.html" },
-    { title: "第十三章：接受自我",        href: "Chapter13.html" },
+    // { title: "第十三章：接受自我",        href: "Chapter13.html" },
     // { title: "第十四章：從長計議",   href: "Chapter14.html" },
     // { title: "第十五章：手稿的意義",       href: "Chapter15.html" },
     // { title: "第十六章：新朋友",   href: "Chapter16.html" },
