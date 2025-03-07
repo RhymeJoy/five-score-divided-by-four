@@ -1,3 +1,18 @@
+// 創建 button 元素
+let button = document.createElement('button');
+button.classList.add('hamburger', 'toggleSidebar');
+
+// 創建三個 span 元素並將它們附加到 button 上
+for (let i = 0; i < 3; i++) {
+    let span = document.createElement('span');
+    button.appendChild(span);
+}
+
+// 將按鈕添加到頁面中的指定位置（例如，將它添加到 body 內）
+document.body.appendChild(button);
+
+
+
 // 選取所有需要觸發的按鈕
 const toggleButtons = document.querySelectorAll('.toggleSidebar');
 const sidebar = document.querySelector('.sidebar');

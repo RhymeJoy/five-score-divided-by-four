@@ -19,9 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isDarkMode) {
             localStorage.setItem('mode', 'dark'); // 儲存暗色模式
             toggleOpacity.textContent = '切換亮色模式';
+            // localStorage.setItem('autoStart', true);
         } else {
             localStorage.setItem('mode', 'light'); // 儲存亮色模式
             toggleOpacity.textContent = '切換暗色模式';
+            // localStorage.setItem('autoStart', false);
         }
     });
 
