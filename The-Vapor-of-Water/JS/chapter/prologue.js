@@ -13,12 +13,12 @@ const title = document.querySelector('.title');
             "至於M6，她們雖然不是本作的主要角色，但在故事中的戲份絕不會少。同樣地，雙姊妹公主及其他次要角色也會有所出場，讓故事更加豐富。",
             "再來你沒看錯！故事的發生地就是在台灣，被丟到這片陌生土地的小馬會經歷怎樣的冒險呢？這正是我希望探索的部分。",
             "此外，我計劃在這個框架下，在加寫一個沒有出現過的角色(至少我還沒看到啦！)，她的出現或許會引發一些蝴蝶效應，但我會盡量不影響原作的完整性。她的加入會為故事帶來哪些趣味與變化，值得期待！",
-            "總而言之，我希望這部小說能為讀者帶來愉快的閱讀體驗，並從中汲取一些樂趣！",
+            "<div style='margin-bottom: 4em;'>總而言之，我希望這部小說能為讀者帶來愉快的閱讀體驗，並從中汲取一些樂趣！</div>",
         ];
 
         paragraphs.reverse().forEach(text => {
             const paragraph = document.createElement('p');
-            paragraph.textContent = text;
+            paragraph.innerHTML = text;
             title.insertAdjacentElement('afterend', paragraph);
         });
 
