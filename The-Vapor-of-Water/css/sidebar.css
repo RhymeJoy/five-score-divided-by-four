@@ -156,9 +156,9 @@
     margin-top: 10px;
 }
 
-/* 按鈕 */
+/* 設定按鈕 */
 
-#toggleOpacity {
+#settingsBtn {
     position: fixed;
     bottom: 1em;              /* 距離底部保持 1em */
     left: 50%;                /* 水平居中 */
@@ -175,17 +175,83 @@
     transition: 0.15s ease;
 }
 
-#toggleOpacity:hover {
+#settingsBtn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-#toggleOpacity.dark {
+#settingsBtn.dark {
     background-color: rgba(255, 255, 255, 0.7);
     color: #111;
     transition: 0.15s ease;
 }
-#toggleOpacity:hover.dark {
+#settingsBtn:hover.dark {
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 設定視窗 */
+#settingsModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffffee;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+    width: 300px;
+}
+
+/* 遮罩背景 */
+#setting-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* 下拉選單 */
+.select-box {
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* 關閉按鈕 */
+#closeSettingsBtn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#closeSettingsBtn:hover {
+    background-color: #a71d2a;
+}
+
+/* 按鈕樣式 */
+#toggleDarkMode {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+#toggleDarkMode:hover {
+    background-color: #555;
 }
 
 /* 滾動條 */
