@@ -1,12 +1,4 @@
-const title = document.querySelector('.title');
-const languageSelect = document.getElementById('languageSelect');
-const settingsBtn = document.getElementById("settingsBtn");
-const settingsModal = document.getElementById("settingsModal");
-const settingOverlay = document.getElementById("setting-overlay");
-const closeSettingsBtn = document.getElementById("closeSettingsBtn");
-const DEFAULT_LANG = "zh-TW";  // ✅ 確保與 paragraphs key 一致
-
-// 文字內容
+// 文字內容《第二章：身世謎題 [上]》
 const paragraphs = {
 
 // 繁字
@@ -185,7 +177,7 @@ const paragraphs = {
         "媽媽看了我一眼，滿臉笑容地說：“那當然了！今天可是個特別的日子，你以為隨便煮煮就能打發嗎？”",
         "我低頭順勢接過剩下的食材，心裡暗自祈禱帽子沒有鬆動，僅憑這麼一個微小的偽裝，希望能撐過這場“特別的日子”。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 破空為Sky Stinger的譯名。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 蒸氣或水蒸氣為Vapor Trail的譯名。</div>",
@@ -368,111 +360,13 @@ const paragraphs = {
         "妈妈看了我一眼，满脸笑容地说：“那当然了！今天可是个特别的日子，你以为随便煮煮就能打发吗？”",
         "我低头顺势接过剩下的食材，心里暗自祈祷帽子没有松动，仅凭这麽一个微小的伪装，希望能撑过这场“特别的日子”。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 破空为Sky Stinger的译名。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 蒸气或水蒸气为Vapor Trail的译名。</div>",
         "<div style='margin-bottom: -4rem;'>3. 所有跟人有关的词都替换成跟马有关。比如：棘手→棘蹄、烦人→烦马、惊人→惊马、等等...</div>",
     ]
 };
-
-function renderText(lang) {
-    console.log("🌍 渲染語言:", lang);
-    console.log("📜 paragraphs 內容:", paragraphs);
-    console.log("📜 渲染內容:", paragraphs[lang]);
-
-    if (!paragraphs[lang]) {
-        console.error(`❌ 錯誤: 找不到 ${lang} 對應的內容！`);
-        return;
-    }
-
-    // **刪除舊的 <p>**
-    let nextElement = title.nextSibling;
-    while (nextElement) {
-        let temp = nextElement.nextSibling;
-        if (nextElement.tagName === "P") {
-            nextElement.remove();
-        }
-        nextElement = temp;
-    }
-
-    // **插入新的內容**
-    paragraphs[lang].slice().reverse().forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = text;
-        title.parentNode.insertBefore(paragraph, title.nextSibling);
-    });
-}
-
-// **語言切換**
-document.getElementById("languageSelect").addEventListener("change", function() {
-    const selectedLang = this.value;
-    localStorage.setItem("selectedLanguage", selectedLang);
-    renderText(selectedLang);
-    updateSettingsText(selectedLang); // 更新設定窗口的文本
-    updateButtonText(selectedLang); // 更新章節目錄按鈕文本
-});
-
-// **更新設定窗口語言文本**
-function updateSettingsText(lang) {
-    if (lang === "zh-TW") {
-        document.getElementById('settingsTitle').textContent = '設定';
-        document.getElementById('settingsLabel').textContent = '選擇語言：';
-        document.getElementById('toggleDarkMode').textContent = '切換暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '關閉';
-    } else if (lang === "zh-CN") {
-        document.getElementById('settingsTitle').textContent = '设置';
-        document.getElementById('settingsLabel').textContent = '选择语言：';
-        document.getElementById('toggleDarkMode').textContent = '切换暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '关闭';
-    }
-}
-
-// **更新章節目錄按鈕文本**
-function updateButtonText(lang) {
-    const toggleSidebarButton = document.querySelector('.toggleSidebar');
-    const SettingButton = document.querySelector('#settingsBtn');
-    if (lang === "zh-TW") {
-        toggleSidebarButton.textContent = '章節目錄';
-        SettingButton.textContent = '設定';
-    } else if (lang === "zh-CN") {
-        toggleSidebarButton.textContent = '章节目录';
-        SettingButton.textContent = '设置';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW"; // 預設為 zh-TW
-    console.log("🌍 預設語言:", savedLang);
-
-    document.querySelector("#languageSelect").value = savedLang;
-    renderText(savedLang);
-    updateSettingsText(savedLang); // 更新設定窗口的文本
-    updateButtonText(savedLang); // 更新章節目錄按鈕文本
-});
-
-
-// **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block"; // 顯示背景遮罩
-});
-
-// **開啟設定視窗**
-function openSettings() {
-    document.getElementById("settingsModal").style.display = "block";
-    document.getElementById("setting-overlay").style.display = "block";
-}
-
-// **關閉設定視窗**
-function closeSettings() {
-    settingsModal.style.display = "none";
-    settingOverlay.style.display = "none"; // 隱藏背景遮罩
-}
-
-// **關閉按鈕監聽**
-closeSettingsBtn.addEventListener("click", closeSettings);
-settingOverlay.addEventListener("click", closeSettings); // 點擊遮罩時也關閉
 
 //創作期間2025/01/05-2025/01/13
 //上傳時間2025/01/13

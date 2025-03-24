@@ -1,12 +1,4 @@
-const title = document.querySelector('.title');
-const languageSelect = document.getElementById('languageSelect');
-const settingsBtn = document.getElementById("settingsBtn");
-const settingsModal = document.getElementById("settingsModal");
-const settingOverlay = document.getElementById("setting-overlay");
-const closeSettingsBtn = document.getElementById("closeSettingsBtn");
-const DEFAULT_LANG = "zh-TW";  // ✅ 確保與 paragraphs key 一致
-
-// 文字內容
+// 文字內容《第九章：溫哥華》
 const paragraphs = {
 
 // 繁字
@@ -186,7 +178,7 @@ const paragraphs = {
         "最後，提醒各位檢查隨身物品，確保沒有遺漏。要是有人東西忘了帶走，那就只能跟我一起回台灣了！”",
         "廣播結束後，機艙內響起一陣輕笑聲，氣氛變得輕鬆了些。而我深吸了一口氣，準備迎接即將展開的新旅程。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -4rem;'>1. Cinesite Vancouver：匯集了世界領先的視覺效果和動畫工作室。憑藉一些最具標誌性的電影時刻,該集團是全球最熱門的生產和返利地點的行業領先人才和技術的強國。<br><br>地址位於加拿大不列顛哥倫比亞省溫哥華市大北道565號500單元。落在溫哥華市的東南部，屬於Mount Pleasant區域。<br><br>該地區以其多元文化和創意產業而聞名，擁有眾多藝術畫廊、咖啡館和餐廳。此外也靠近溫哥華的主要交通樞紐，方便前往市中心和國際機場或其他地區。</div>",
     ],
@@ -368,109 +360,11 @@ const paragraphs = {
         "最后，提醒各位检查随身物品，确保没有遗漏。要是有人东西忘了带走，那就只能跟我一起回台湾了！”",
         "广播结束后，机舱内响起一阵轻笑声，气氛变得轻松了些。而我深吸了一口气，准备迎接即将展开的新旅程。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>1. Cinesite Vancouver：汇集了世界领先的视觉效果和动画工作室。凭藉一些最具标誌性的电影时刻,该集团是全球最热门的生产和返利地点的行业领先人才和技术的强国。<br><br>地址位于加拿大不列颠哥伦比亚省温哥华市大北道565号500单元。落在温哥华市的东南部，属于Mount Pleasant区域。<br><br>该地区以其多元文化和创意产业而闻名，拥有众多艺术画廊、咖啡馆和餐厅。此外也靠近温哥华的主要交通枢纽，方便前往市中心和国际机场或其他地区。</div>",
     ]
 };
-
-function renderText(lang) {
-    console.log("🌍 渲染語言:", lang);
-    console.log("📜 paragraphs 內容:", paragraphs);
-    console.log("📜 渲染內容:", paragraphs[lang]);
-
-    if (!paragraphs[lang]) {
-        console.error(`❌ 錯誤: 找不到 ${lang} 對應的內容！`);
-        return;
-    }
-
-    // **刪除舊的 <p>**
-    let nextElement = title.nextSibling;
-    while (nextElement) {
-        let temp = nextElement.nextSibling;
-        if (nextElement.tagName === "P") {
-            nextElement.remove();
-        }
-        nextElement = temp;
-    }
-
-    // **插入新的內容**
-    paragraphs[lang].slice().reverse().forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = text;
-        title.parentNode.insertBefore(paragraph, title.nextSibling);
-    });
-}
-
-// **語言切換**
-document.getElementById("languageSelect").addEventListener("change", function() {
-    const selectedLang = this.value;
-    localStorage.setItem("selectedLanguage", selectedLang);
-    renderText(selectedLang);
-    updateSettingsText(selectedLang); // 更新設定窗口的文本
-    updateButtonText(selectedLang); // 更新章節目錄按鈕文本
-});
-
-// **更新設定窗口語言文本**
-function updateSettingsText(lang) {
-    if (lang === "zh-TW") {
-        document.getElementById('settingsTitle').textContent = '設定';
-        document.getElementById('settingsLabel').textContent = '選擇語言：';
-        document.getElementById('toggleDarkMode').textContent = '切換暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '關閉';
-    } else if (lang === "zh-CN") {
-        document.getElementById('settingsTitle').textContent = '设置';
-        document.getElementById('settingsLabel').textContent = '选择语言：';
-        document.getElementById('toggleDarkMode').textContent = '切换暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '关闭';
-    }
-}
-
-// **更新章節目錄按鈕文本**
-function updateButtonText(lang) {
-    const toggleSidebarButton = document.querySelector('.toggleSidebar');
-    const SettingButton = document.querySelector('#settingsBtn');
-    if (lang === "zh-TW") {
-        toggleSidebarButton.textContent = '章節目錄';
-        SettingButton.textContent = '設定';
-    } else if (lang === "zh-CN") {
-        toggleSidebarButton.textContent = '章节目录';
-        SettingButton.textContent = '设置';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW"; // 預設為 zh-TW
-    console.log("🌍 預設語言:", savedLang);
-
-    document.querySelector("#languageSelect").value = savedLang;
-    renderText(savedLang);
-    updateSettingsText(savedLang); // 更新設定窗口的文本
-    updateButtonText(savedLang); // 更新章節目錄按鈕文本
-});
-
-
-// **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block"; // 顯示背景遮罩
-});
-
-// **開啟設定視窗**
-function openSettings() {
-    document.getElementById("settingsModal").style.display = "block";
-    document.getElementById("setting-overlay").style.display = "block";
-}
-
-// **關閉設定視窗**
-function closeSettings() {
-    settingsModal.style.display = "none";
-    settingOverlay.style.display = "none"; // 隱藏背景遮罩
-}
-
-// **關閉按鈕監聽**
-closeSettingsBtn.addEventListener("click", closeSettings);
-settingOverlay.addEventListener("click", closeSettings); // 點擊遮罩時也關閉
 
 //創作期間2025/02/12-2025/02/13
 //上傳時間2025/02/13

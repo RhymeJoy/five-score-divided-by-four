@@ -1,12 +1,4 @@
-const title = document.querySelector('.title');
-const languageSelect = document.getElementById('languageSelect');
-const settingsBtn = document.getElementById("settingsBtn");
-const settingsModal = document.getElementById("settingsModal");
-const settingOverlay = document.getElementById("setting-overlay");
-const closeSettingsBtn = document.getElementById("closeSettingsBtn");
-const DEFAULT_LANG = "zh-TW";  // ✅ 確保與 paragraphs key 一致
-
-// 文字內容
+// 文字內容《第六章：異變日增[下]》
 const paragraphs = {
 
 // 繁字
@@ -186,7 +178,7 @@ const paragraphs = {
         "欣韻的爸爸也簡單但真誠地說道：“無論如何，記住我們都在你們身後，幫助你們，支持你們。想傾訴或有問題歡迎打電話回來。”",
         "此時的我們，雖然心中充滿未知和不確定，但也能感受到來自家人和朋友的力量。或許，這就是面對困難和挑戰時，最重要的支持。我們不再回頭，準備好邁向接下來的冒險。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 第二天：血翅、變矮、墊腳尖、手指腳趾退化？</div>",
         "<div style='margin-bottom: -4rem;'>2.「新生羽」或「血羽」，英文對應的術語是「pin feather」。這是一種尚未完全成熟的羽毛，外被角蛋白構成的羽鞘包裹，內部有血管提供營養。隨著羽毛的生長，外部的羽鞘會逐漸脫落，羽毛最終展開並成熟。</div>",
@@ -369,110 +361,12 @@ const paragraphs = {
         "欣韵的爸爸也简单但真诚地说道：“无论如何，记住我们都在你们身后，帮助你们，支持你们。想倾诉或有问题欢迎打电话回来。”",
         "此时的我们，虽然心中充满未知和不确定，但也能感受到来自家人和朋友的力量。或许，这就是面对困难和挑战时，最重要的支持。我们不再回头，准备好迈向接下来的冒险。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 第二天：血翅、变矮、垫脚尖、手指脚趾退化？</div>",
         "<div style='margin-bottom: -4rem;'>2.「新生羽」或「血羽」，英文对应的术语是「pin feather」。这是一种尚未完全成熟的羽毛，外被角蛋白构成的羽鞘包裹，内部有血管提供营养。随着羽毛的生长，外部的羽鞘会逐渐脱落，羽毛最终展开并成熟。</div>",
     ]
 };
-
-function renderText(lang) {
-    console.log("🌍 渲染語言:", lang);
-    console.log("📜 paragraphs 內容:", paragraphs);
-    console.log("📜 渲染內容:", paragraphs[lang]);
-
-    if (!paragraphs[lang]) {
-        console.error(`❌ 錯誤: 找不到 ${lang} 對應的內容！`);
-        return;
-    }
-
-    // **刪除舊的 <p>**
-    let nextElement = title.nextSibling;
-    while (nextElement) {
-        let temp = nextElement.nextSibling;
-        if (nextElement.tagName === "P") {
-            nextElement.remove();
-        }
-        nextElement = temp;
-    }
-
-    // **插入新的內容**
-    paragraphs[lang].slice().reverse().forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = text;
-        title.parentNode.insertBefore(paragraph, title.nextSibling);
-    });
-}
-
-// **語言切換**
-document.getElementById("languageSelect").addEventListener("change", function() {
-    const selectedLang = this.value;
-    localStorage.setItem("selectedLanguage", selectedLang);
-    renderText(selectedLang);
-    updateSettingsText(selectedLang); // 更新設定窗口的文本
-    updateButtonText(selectedLang); // 更新章節目錄按鈕文本
-});
-
-// **更新設定窗口語言文本**
-function updateSettingsText(lang) {
-    if (lang === "zh-TW") {
-        document.getElementById('settingsTitle').textContent = '設定';
-        document.getElementById('settingsLabel').textContent = '選擇語言：';
-        document.getElementById('toggleDarkMode').textContent = '切換暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '關閉';
-    } else if (lang === "zh-CN") {
-        document.getElementById('settingsTitle').textContent = '设置';
-        document.getElementById('settingsLabel').textContent = '选择语言：';
-        document.getElementById('toggleDarkMode').textContent = '切换暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '关闭';
-    }
-}
-
-// **更新章節目錄按鈕文本**
-function updateButtonText(lang) {
-    const toggleSidebarButton = document.querySelector('.toggleSidebar');
-    const SettingButton = document.querySelector('#settingsBtn');
-    if (lang === "zh-TW") {
-        toggleSidebarButton.textContent = '章節目錄';
-        SettingButton.textContent = '設定';
-    } else if (lang === "zh-CN") {
-        toggleSidebarButton.textContent = '章节目录';
-        SettingButton.textContent = '设置';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW"; // 預設為 zh-TW
-    console.log("🌍 預設語言:", savedLang);
-
-    document.querySelector("#languageSelect").value = savedLang;
-    renderText(savedLang);
-    updateSettingsText(savedLang); // 更新設定窗口的文本
-    updateButtonText(savedLang); // 更新章節目錄按鈕文本
-});
-
-
-// **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block"; // 顯示背景遮罩
-});
-
-// **開啟設定視窗**
-function openSettings() {
-    document.getElementById("settingsModal").style.display = "block";
-    document.getElementById("setting-overlay").style.display = "block";
-}
-
-// **關閉設定視窗**
-function closeSettings() {
-    settingsModal.style.display = "none";
-    settingOverlay.style.display = "none"; // 隱藏背景遮罩
-}
-
-// **關閉按鈕監聽**
-closeSettingsBtn.addEventListener("click", closeSettings);
-settingOverlay.addEventListener("click", closeSettings); // 點擊遮罩時也關閉
 
 //創作期間2025/01/22-2025/01/27、2025/02/03-2025/02/05
 //上傳時間2025/02/05

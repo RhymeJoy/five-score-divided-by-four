@@ -1,12 +1,4 @@
-const title = document.querySelector('.title');
-const languageSelect = document.getElementById('languageSelect');
-const settingsBtn = document.getElementById("settingsBtn");
-const settingsModal = document.getElementById("settingsModal");
-const settingOverlay = document.getElementById("setting-overlay");
-const closeSettingsBtn = document.getElementById("closeSettingsBtn");
-const DEFAULT_LANG = "zh-TW";  // ✅ 確保與 paragraphs key 一致
-
-// 文字內容
+// 文字內容《第一章：南港小馬展》
 const paragraphs = {
 
 // 繁字
@@ -116,7 +108,7 @@ const paragraphs = {
         "今天整整一天，我們都過得格外開心，讓人捨不得結束。然而，時間不會為我們停留，我只能期待明天的馬展帶來更多驚喜。看了看時間，已經不早了！於是，我和欣韻洗漱完後，便相擁而眠，帶著滿滿的回憶與期待，沉入甜美的夢鄉。",
         "說不定還能夢到露娜公主...",
         
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 感謝友人提供自己的設定，給我做使用。角色多了，靠自己想，腦袋會炸掉。</div>",
         "<div style='margin-bottom: -4rem;'>2. Radio Garden是一個外國網站，幾乎集合了全世界所有的電台頻道。電台還是真真實實在當地live，並不是預錄的。</div>",
@@ -229,110 +221,12 @@ const paragraphs = {
         "今天整整一天，我们都过得格外开心，让人捨不得结束。然而，时间不会为我们停留，我只能期待明天的马展带来更多惊喜。看了看时间，已经不早了！于是，我和欣韵洗漱完后，便相拥而眠，带着满满的回忆与期待，沉入甜美的梦乡。",
         "说不定还能梦到露娜公主...",
         
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 感谢友人提供自己的设定，给我做使用。角色多了，靠自己想，脑袋会炸掉。</div>",
         "<div style='margin-bottom: -4rem;'>2. Radio Garden是一个外国网站，几乎集合了全世界所有的电台频道。电台还是真真实实在当地live，并不是预录的。</div>",
     ]
 };
-
-function renderText(lang) {
-    console.log("🌍 渲染語言:", lang);
-    console.log("📜 paragraphs 內容:", paragraphs);
-    console.log("📜 渲染內容:", paragraphs[lang]);
-
-    if (!paragraphs[lang]) {
-        console.error(`❌ 錯誤: 找不到 ${lang} 對應的內容！`);
-        return;
-    }
-
-    // **刪除舊的 <p>**
-    let nextElement = title.nextSibling;
-    while (nextElement) {
-        let temp = nextElement.nextSibling;
-        if (nextElement.tagName === "P") {
-            nextElement.remove();
-        }
-        nextElement = temp;
-    }
-
-    // **插入新的內容**
-    paragraphs[lang].slice().reverse().forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = text;
-        title.parentNode.insertBefore(paragraph, title.nextSibling);
-    });
-}
-
-// **語言切換**
-document.getElementById("languageSelect").addEventListener("change", function() {
-    const selectedLang = this.value;
-    localStorage.setItem("selectedLanguage", selectedLang);
-    renderText(selectedLang);
-    updateSettingsText(selectedLang); // 更新設定窗口的文本
-    updateButtonText(selectedLang); // 更新章節目錄按鈕文本
-});
-
-// **更新設定窗口語言文本**
-function updateSettingsText(lang) {
-    if (lang === "zh-TW") {
-        document.getElementById('settingsTitle').textContent = '設定';
-        document.getElementById('settingsLabel').textContent = '選擇語言：';
-        document.getElementById('toggleDarkMode').textContent = '切換暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '關閉';
-    } else if (lang === "zh-CN") {
-        document.getElementById('settingsTitle').textContent = '设置';
-        document.getElementById('settingsLabel').textContent = '选择语言：';
-        document.getElementById('toggleDarkMode').textContent = '切换暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '关闭';
-    }
-}
-
-// **更新章節目錄按鈕文本**
-function updateButtonText(lang) {
-    const toggleSidebarButton = document.querySelector('.toggleSidebar');
-    const SettingButton = document.querySelector('#settingsBtn');
-    if (lang === "zh-TW") {
-        toggleSidebarButton.textContent = '章節目錄';
-        SettingButton.textContent = '設定';
-    } else if (lang === "zh-CN") {
-        toggleSidebarButton.textContent = '章节目录';
-        SettingButton.textContent = '设置';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW"; // 預設為 zh-TW
-    console.log("🌍 預設語言:", savedLang);
-
-    document.querySelector("#languageSelect").value = savedLang;
-    renderText(savedLang);
-    updateSettingsText(savedLang); // 更新設定窗口的文本
-    updateButtonText(savedLang); // 更新章節目錄按鈕文本
-});
-
-
-// **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block"; // 顯示背景遮罩
-});
-
-// **開啟設定視窗**
-function openSettings() {
-    document.getElementById("settingsModal").style.display = "block";
-    document.getElementById("setting-overlay").style.display = "block";
-}
-
-// **關閉設定視窗**
-function closeSettings() {
-    settingsModal.style.display = "none";
-    settingOverlay.style.display = "none"; // 隱藏背景遮罩
-}
-
-// **關閉按鈕監聽**
-closeSettingsBtn.addEventListener("click", closeSettings);
-settingOverlay.addEventListener("click", closeSettings); // 點擊遮罩時也關閉
 
 //創作期間2024/12/27-2025/01/05
 //上傳時間2025/01/05

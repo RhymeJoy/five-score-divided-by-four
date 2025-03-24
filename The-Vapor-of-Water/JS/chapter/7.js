@@ -1,12 +1,4 @@
-const title = document.querySelector('.title');
-const languageSelect = document.getElementById('languageSelect');
-const settingsBtn = document.getElementById("settingsBtn");
-const settingsModal = document.getElementById("settingsModal");
-const settingOverlay = document.getElementById("setting-overlay");
-const closeSettingsBtn = document.getElementById("closeSettingsBtn");
-const DEFAULT_LANG = "zh-TW";  // ✅ 確保與 paragraphs key 一致
-
-// 文字內容
+// 文字內容《第七章：空中之旅》
 const paragraphs = {
 
 // 繁字
@@ -195,7 +187,7 @@ const paragraphs = {
         "我再次低頭看了眼手中的手機，幾條未讀信息還在螢幕上閃爍。這些信息，大多來自家人和朋友，他們並不知曉我們此刻所面對的一切，也許，永遠不會知道。",
         "“再忍一會兒，總會過去的。”我在心裡對自己說，然後靠在椅背上，試圖閉上眼睛，也許能抓住些許的夢境，至少讓自己稍微放鬆片刻。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -4rem;'>1. 如果雙發飛機從台灣（台中/RMQ）飛往加拿大（溫哥華/YVR），並在日本（羽田/HND）與阿拉斯加（安克雷奇/ANC）分別加油，則總飛行時間會受到航線、加油時間、天氣等因素影響。<br><br>純飛行時間：約 11 小時！<br>加油與地勤處理時間：約 3 小時！<br>總旅行時間（不含其他延誤）：約 14 小時！</div>",
     ],
@@ -386,109 +378,11 @@ const paragraphs = {
         "我再次低头看了眼手中的手机，几条未读信息还在萤幕上闪烁。这些信息，大多来自家人和朋友，他们并不知晓我们此刻所面对的一切，也许，永远不会知道。",
         "“再忍一会儿，总会过去的。”我在心里对自己说，然后靠在椅背上，试图闭上眼睛，也许能抓住些许的梦境，至少让自己稍微放松片刻。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>1. 如果双发飞机从台湾（台中/RMQ）飞往加拿大（温哥华/YVR），并在日本（羽田/HND）与阿拉斯加（安克雷奇/ANC）分别加油，则总飞行时间会受到航线、加油时间、天气等因素影响。<br><br>纯飞行时间：约 11 小时！<br>加油与地勤处理时间：约 3 小时！<br>总旅行时间（不含其他延误）：约 14 小时！</div>",
     ]
 };
-
-function renderText(lang) {
-    console.log("🌍 渲染語言:", lang);
-    console.log("📜 paragraphs 內容:", paragraphs);
-    console.log("📜 渲染內容:", paragraphs[lang]);
-
-    if (!paragraphs[lang]) {
-        console.error(`❌ 錯誤: 找不到 ${lang} 對應的內容！`);
-        return;
-    }
-
-    // **刪除舊的 <p>**
-    let nextElement = title.nextSibling;
-    while (nextElement) {
-        let temp = nextElement.nextSibling;
-        if (nextElement.tagName === "P") {
-            nextElement.remove();
-        }
-        nextElement = temp;
-    }
-
-    // **插入新的內容**
-    paragraphs[lang].slice().reverse().forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = text;
-        title.parentNode.insertBefore(paragraph, title.nextSibling);
-    });
-}
-
-// **語言切換**
-document.getElementById("languageSelect").addEventListener("change", function() {
-    const selectedLang = this.value;
-    localStorage.setItem("selectedLanguage", selectedLang);
-    renderText(selectedLang);
-    updateSettingsText(selectedLang); // 更新設定窗口的文本
-    updateButtonText(selectedLang); // 更新章節目錄按鈕文本
-});
-
-// **更新設定窗口語言文本**
-function updateSettingsText(lang) {
-    if (lang === "zh-TW") {
-        document.getElementById('settingsTitle').textContent = '設定';
-        document.getElementById('settingsLabel').textContent = '選擇語言：';
-        document.getElementById('toggleDarkMode').textContent = '切換暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '關閉';
-    } else if (lang === "zh-CN") {
-        document.getElementById('settingsTitle').textContent = '设置';
-        document.getElementById('settingsLabel').textContent = '选择语言：';
-        document.getElementById('toggleDarkMode').textContent = '切换暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '关闭';
-    }
-}
-
-// **更新章節目錄按鈕文本**
-function updateButtonText(lang) {
-    const toggleSidebarButton = document.querySelector('.toggleSidebar');
-    const SettingButton = document.querySelector('#settingsBtn');
-    if (lang === "zh-TW") {
-        toggleSidebarButton.textContent = '章節目錄';
-        SettingButton.textContent = '設定';
-    } else if (lang === "zh-CN") {
-        toggleSidebarButton.textContent = '章节目录';
-        SettingButton.textContent = '设置';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW"; // 預設為 zh-TW
-    console.log("🌍 預設語言:", savedLang);
-
-    document.querySelector("#languageSelect").value = savedLang;
-    renderText(savedLang);
-    updateSettingsText(savedLang); // 更新設定窗口的文本
-    updateButtonText(savedLang); // 更新章節目錄按鈕文本
-});
-
-
-// **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block"; // 顯示背景遮罩
-});
-
-// **開啟設定視窗**
-function openSettings() {
-    document.getElementById("settingsModal").style.display = "block";
-    document.getElementById("setting-overlay").style.display = "block";
-}
-
-// **關閉設定視窗**
-function closeSettings() {
-    settingsModal.style.display = "none";
-    settingOverlay.style.display = "none"; // 隱藏背景遮罩
-}
-
-// **關閉按鈕監聽**
-closeSettingsBtn.addEventListener("click", closeSettings);
-settingOverlay.addEventListener("click", closeSettings); // 點擊遮罩時也關閉
 
 //創作期間2025/02/06-2025/02/07
 //上傳時間2025/02/07

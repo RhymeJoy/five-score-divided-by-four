@@ -1,12 +1,4 @@
-const title = document.querySelector('.title');
-const languageSelect = document.getElementById('languageSelect');
-const settingsBtn = document.getElementById("settingsBtn");
-const settingsModal = document.getElementById("settingsModal");
-const settingOverlay = document.getElementById("setting-overlay");
-const closeSettingsBtn = document.getElementById("closeSettingsBtn");
-const DEFAULT_LANG = "zh-TW";  // ✅ 確保與 paragraphs key 一致
-
-// 文字內容
+// 文字內容《第十章：非法入境》
 const paragraphs = {
 
 // 繁字
@@ -206,7 +198,7 @@ const paragraphs = {
         "聽到夢瑄提的誇張建議，我不由得瞪了她一眼，心裡忍不住有些無奈。",
         "“嘿嘿，還是算了。”夢瑄乾笑兩聲，然後一腳踩下油門，“不過現在最重要的，是我們要去哪裡？”",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 弗雷澤河：原文為(Fraser River)，加拿大華人稱為菲沙河，是加拿大卑詩省最長的河流、加拿大第十長河流。全長1,375公里，流域面積220,000平方公里，當中一小部份位於美國華盛頓州。發源自洛磯山，在溫哥華和列治文之間流入太平洋。在機場邊有一個淺灘叫做(Swishwash Island)，也是主角剛剛跨越的地方。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 西堤漫步小道：列治文西堤漫步小道(West Dyke Trail)是加拿大溫哥華不列顛哥倫比亞省列治文(Richmond)一條觀日落賞晚霞的最佳小道。這條長約5.5公裏的健行步道北起新地公園(Terra Nova Rural Park)，南至蓋瑞岬公園(Garry Point Park)。漫步在這條步道上，可以近觀深入到喬治亞灣(Georgia Strait)的水生植物茂密的鱘魚淺灘(Sturgeon Bank)，也可以不時與各種不同的鳥類相遇。</div>",
@@ -413,7 +405,7 @@ const paragraphs = {
         "听到梦瑄提的夸张建议，我不由得瞪了她一眼，心里忍不住有些无奈。",
         "“嘿嘿，还是算了。”梦瑄乾笑两声，然后一脚踩下油门，“不过现在最重要的，是我们要去哪里？”",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 弗雷泽河：原文为(Fraser River)，加拿大华人称为菲沙河，是加拿大卑诗省最长的河流、加拿大第十长河流。全长1,375公里，流域面积220,000平方公里，当中一小部份位于美国华盛顿州。发源自洛矶山，在温哥华和列治文之间流入太平洋。在机场边有一个浅滩叫做(Swishwash Island)，也是主角刚刚跨越的地方。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 西堤漫步小道：列治文西堤漫步小道(West Dyke Trail)是加拿大温哥华不列颠哥伦比亚省列治文(Richmond)一条观日落赏晚霞的最佳小道。这条长约5.5公裏的健行步道北起新地公园(Terra Nova Rural Park)，南至盖瑞岬公园(Garry Point Park)。漫步在这条步道上，可以近观深入到乔治亚湾(Georgia Strait)的水生植物茂密的鲟鱼浅滩(Sturgeon Bank)，也可以不时与各种不同的鸟类相遇。</div>",
@@ -423,104 +415,6 @@ const paragraphs = {
         "<div style='margin-bottom: -4rem;'>6. eSim卡：这是符合业界标准的数位无实体SIM卡，可让你启用电信业者的行动方案，而不需要使用实体SIM卡。到国外就不用再租笨重的WiFi分享器，只要在有支援的国家就可以直接畅游网路，及拨号。</div>",
     ]
 };
-
-function renderText(lang) {
-    console.log("🌍 渲染語言:", lang);
-    console.log("📜 paragraphs 內容:", paragraphs);
-    console.log("📜 渲染內容:", paragraphs[lang]);
-
-    if (!paragraphs[lang]) {
-        console.error(`❌ 錯誤: 找不到 ${lang} 對應的內容！`);
-        return;
-    }
-
-    // **刪除舊的 <p>**
-    let nextElement = title.nextSibling;
-    while (nextElement) {
-        let temp = nextElement.nextSibling;
-        if (nextElement.tagName === "P") {
-            nextElement.remove();
-        }
-        nextElement = temp;
-    }
-
-    // **插入新的內容**
-    paragraphs[lang].slice().reverse().forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = text;
-        title.parentNode.insertBefore(paragraph, title.nextSibling);
-    });
-}
-
-// **語言切換**
-document.getElementById("languageSelect").addEventListener("change", function() {
-    const selectedLang = this.value;
-    localStorage.setItem("selectedLanguage", selectedLang);
-    renderText(selectedLang);
-    updateSettingsText(selectedLang); // 更新設定窗口的文本
-    updateButtonText(selectedLang); // 更新章節目錄按鈕文本
-});
-
-// **更新設定窗口語言文本**
-function updateSettingsText(lang) {
-    if (lang === "zh-TW") {
-        document.getElementById('settingsTitle').textContent = '設定';
-        document.getElementById('settingsLabel').textContent = '選擇語言：';
-        document.getElementById('toggleDarkMode').textContent = '切換暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '關閉';
-    } else if (lang === "zh-CN") {
-        document.getElementById('settingsTitle').textContent = '设置';
-        document.getElementById('settingsLabel').textContent = '选择语言：';
-        document.getElementById('toggleDarkMode').textContent = '切换暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '关闭';
-    }
-}
-
-// **更新章節目錄按鈕文本**
-function updateButtonText(lang) {
-    const toggleSidebarButton = document.querySelector('.toggleSidebar');
-    const SettingButton = document.querySelector('#settingsBtn');
-    if (lang === "zh-TW") {
-        toggleSidebarButton.textContent = '章節目錄';
-        SettingButton.textContent = '設定';
-    } else if (lang === "zh-CN") {
-        toggleSidebarButton.textContent = '章节目录';
-        SettingButton.textContent = '设置';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW"; // 預設為 zh-TW
-    console.log("🌍 預設語言:", savedLang);
-
-    document.querySelector("#languageSelect").value = savedLang;
-    renderText(savedLang);
-    updateSettingsText(savedLang); // 更新設定窗口的文本
-    updateButtonText(savedLang); // 更新章節目錄按鈕文本
-});
-
-
-// **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block"; // 顯示背景遮罩
-});
-
-// **開啟設定視窗**
-function openSettings() {
-    document.getElementById("settingsModal").style.display = "block";
-    document.getElementById("setting-overlay").style.display = "block";
-}
-
-// **關閉設定視窗**
-function closeSettings() {
-    settingsModal.style.display = "none";
-    settingOverlay.style.display = "none"; // 隱藏背景遮罩
-}
-
-// **關閉按鈕監聽**
-closeSettingsBtn.addEventListener("click", closeSettings);
-settingOverlay.addEventListener("click", closeSettings); // 點擊遮罩時也關閉
 
 //創作期間2025/02/14-2025/02/20
 //上傳時間2025/02/21

@@ -1,12 +1,4 @@
-const title = document.querySelector('.title');
-const languageSelect = document.getElementById('languageSelect');
-const settingsBtn = document.getElementById("settingsBtn");
-const settingsModal = document.getElementById("settingsModal");
-const settingOverlay = document.getElementById("setting-overlay");
-const closeSettingsBtn = document.getElementById("closeSettingsBtn");
-const DEFAULT_LANG = "zh-TW";  // ✅ 確保與 paragraphs key 一致
-
-// 文字內容
+// 文字內容《第十一章：短暫的休憩》
 const paragraphs = {
 
 // 繁字
@@ -223,7 +215,7 @@ const paragraphs = {
         "不知過了多久，飛馬的眼睛終於閉上了，無法再繼續保持警覺。獨角獸也在這時感覺到疲勞，坐了下來，輕輕地靠在一旁的大石上，閉上眼睛休息。",
         "這樣靜靜地，兩隻小馬就這麼不知不覺地陷入了沉睡。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>備註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 度假村風格民宿：該民宿就落在弗雷澤河旁。這間度假屋位於加拿大不列顛哥倫比亞省的三角洲(Delta)市，距離架空列車橋港站(Bridgeport Skytrain Station)約23公里。<br>民宿擁有一個帶有美麗景色的泳池和熱水浴池，並提供汽車租賃服務。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 雙人床：(Full Bed)，寬度約137公分(54英寸)，長度約191公分(75英寸)。適合單人使用，提供較寬敞的睡眠空間；對於身高較高的個人，可能會感到長度不足。</div>",
@@ -444,111 +436,13 @@ const paragraphs = {
         "不知过了多久，飞马的眼睛终于闭上了，无法再继续保持警觉。独角兽也在这时感觉到疲劳，坐了下来，轻轻地靠在一旁的大石上，闭上眼睛休息。",
         "这样静静地，两隻小马就这麽不知不觉地陷入了沉睡。",
 
-        "<div class='line'></div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 度假村风格民宿：该民宿就落在弗雷泽河旁。这间度假屋位于加拿大不列颠哥伦比亚省的三角洲(Delta)市，距离架空列车桥港站(Bridgeport Skytrain Station)约23公里。<br>民宿拥有一个带有美丽景色的泳池和热水浴池，并提供汽车租赁服务。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 双人床：(Full Bed)，宽度约137公分(54英寸)，长度约191公分(75英寸)。适合单人使用，提供较宽敞的睡眠空间；对于身高较高的个人，可能会感到长度不足。</div>",
         "<div style='margin-bottom: -4rem;'>3. 特大双人床：(King Bed)，宽度约193公分(76英寸)，长度约203公分(80英寸)。适合夫妻或需要更多睡眠空间的人，特别是身高较高的个人。</div>",
     ]
 };
-
-function renderText(lang) {
-    console.log("🌍 渲染語言:", lang);
-    console.log("📜 paragraphs 內容:", paragraphs);
-    console.log("📜 渲染內容:", paragraphs[lang]);
-
-    if (!paragraphs[lang]) {
-        console.error(`❌ 錯誤: 找不到 ${lang} 對應的內容！`);
-        return;
-    }
-
-    // **刪除舊的 <p>**
-    let nextElement = title.nextSibling;
-    while (nextElement) {
-        let temp = nextElement.nextSibling;
-        if (nextElement.tagName === "P") {
-            nextElement.remove();
-        }
-        nextElement = temp;
-    }
-
-    // **插入新的內容**
-    paragraphs[lang].slice().reverse().forEach(text => {
-        const paragraph = document.createElement('p');
-        paragraph.innerHTML = text;
-        title.parentNode.insertBefore(paragraph, title.nextSibling);
-    });
-}
-
-// **語言切換**
-document.getElementById("languageSelect").addEventListener("change", function() {
-    const selectedLang = this.value;
-    localStorage.setItem("selectedLanguage", selectedLang);
-    renderText(selectedLang);
-    updateSettingsText(selectedLang); // 更新設定窗口的文本
-    updateButtonText(selectedLang); // 更新章節目錄按鈕文本
-});
-
-// **更新設定窗口語言文本**
-function updateSettingsText(lang) {
-    if (lang === "zh-TW") {
-        document.getElementById('settingsTitle').textContent = '設定';
-        document.getElementById('settingsLabel').textContent = '選擇語言：';
-        document.getElementById('toggleDarkMode').textContent = '切換暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '關閉';
-    } else if (lang === "zh-CN") {
-        document.getElementById('settingsTitle').textContent = '设置';
-        document.getElementById('settingsLabel').textContent = '选择语言：';
-        document.getElementById('toggleDarkMode').textContent = '切换暗色模式';
-        document.getElementById('closeSettingsBtn').textContent = '关闭';
-    }
-}
-
-// **更新章節目錄按鈕文本**
-function updateButtonText(lang) {
-    const toggleSidebarButton = document.querySelector('.toggleSidebar');
-    const SettingButton = document.querySelector('#settingsBtn');
-    if (lang === "zh-TW") {
-        toggleSidebarButton.textContent = '章節目錄';
-        SettingButton.textContent = '設定';
-    } else if (lang === "zh-CN") {
-        toggleSidebarButton.textContent = '章节目录';
-        SettingButton.textContent = '设置';
-    }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW"; // 預設為 zh-TW
-    console.log("🌍 預設語言:", savedLang);
-
-    document.querySelector("#languageSelect").value = savedLang;
-    renderText(savedLang);
-    updateSettingsText(savedLang); // 更新設定窗口的文本
-    updateButtonText(savedLang); // 更新章節目錄按鈕文本
-});
-
-
-// **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block"; // 顯示背景遮罩
-});
-
-// **開啟設定視窗**
-function openSettings() {
-    document.getElementById("settingsModal").style.display = "block";
-    document.getElementById("setting-overlay").style.display = "block";
-}
-
-// **關閉設定視窗**
-function closeSettings() {
-    settingsModal.style.display = "none";
-    settingOverlay.style.display = "none"; // 隱藏背景遮罩
-}
-
-// **關閉按鈕監聽**
-closeSettingsBtn.addEventListener("click", closeSettings);
-settingOverlay.addEventListener("click", closeSettings); // 點擊遮罩時也關閉
 
 //創作期間2025/02/21-2025/02/25
 //上傳時間2025/02/25
