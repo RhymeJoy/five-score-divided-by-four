@@ -68,16 +68,6 @@ body {
     text-align: center;
     width: 100%;
 }
-.vapor a {
-    display: inline-block !important;
-    text-align: inherit !important;
-    font-family: inherit !important;
-    color: inherit !important;
-    text-decoration: none !important;
-    font-size: inherit !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-}
 .vapor a:hover img {
     transform: scale(1.05) translateY(-10px);
     transition: 0.2s ease-out;
@@ -103,7 +93,7 @@ body {
     margin: 0em;
     transition: 0.25s ease;
 }
-.container a{
+.container > a{
     display: block;
     text-align: center;
     font-family: LXGW WenKai Mono TC;
@@ -113,11 +103,11 @@ body {
     padding: 0.3em 0em;
     transition: 0.2s ease;
 }
-.container a:hover{
+.container > a:hover{
     color: rgb(69, 205, 255);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
-.dark .container a:hover{
+.dark.container > a:hover{
     color: rgb(69, 205, 255);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
 }
