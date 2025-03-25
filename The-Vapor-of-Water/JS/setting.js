@@ -31,6 +31,7 @@ function renderText(lang) {
         paragraph.innerHTML = text;
         title.parentNode.insertBefore(paragraph, title.nextSibling);
     });
+    countChineseCharacters();  // 語言變更後重新計算字數
 }
 
 // **語言切換**
