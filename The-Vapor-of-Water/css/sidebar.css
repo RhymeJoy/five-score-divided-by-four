@@ -4,7 +4,7 @@
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(to right, rgb(224, 250, 255, 1) 0%, rgba(234, 253, 255, 0.9) 100%);
+    background: linear-gradient(to right, rgb(224, 250, 255) 0%, rgba(234, 253, 255, 0.5) 100%);
     width: 20.25rem;
     height: 100%;
     position: fixed;
@@ -12,12 +12,13 @@
     transform: translateX(-100%);       /* 初始隱藏在左側 */
     top: 0rem;
     z-index: 4;
+    backdrop-filter: blur(5px);
 }
 .sidebar.active {
     transform: translateX(0);           /* 顯示時從左側滑入 */
 }
 .sidebar.dark {
-    background: linear-gradient(to right, rgb(1, 58, 79) 0%, rgba(1, 58, 79, 0.9) 100%);
+    background: linear-gradient(to right, rgba(0, 8, 101) 0%, rgba(1, 31, 79, 0.7) 100%);
     transition: background-color 0.25s ease-in-out; 
 }
 .sidebar.dark.active {
@@ -41,7 +42,6 @@
 .sidebar ul {
     padding: 0em 1.35em;
     list-style-type: none;
-    color: #823ed0;
     height: calc(100vh - 5.25em); /* 減去一定的高度以避開按鈕 */
     overflow-y: auto;       /* 當內容超出時啟用垂直滾動條 */
     margin-bottom: 1em;   /* 確保不直接接觸到底部按鈕 */
@@ -50,7 +50,7 @@
     margin: 0.75rem 0rem;
 }
 .sidebar ul li a {
-    color: #823ed0;
+    color: #742ac9;
     width: 100%;            /* 設定固定寬度，根據需要調整 */
     font-family: LXGW WenKai Mono TC;
     font-size: 1.5rem;
@@ -58,16 +58,25 @@
     font-weight: lighter;
     text-decoration: none;
 }
+.dark.sidebar ul li a {
+    color: #bc4fe4;
+}
 .sidebar ul li a:hover {
-    color: #d7bf21;
+    color: #c2a608;
     text-decoration: underline;
 }
-
+.dark.sidebar ul li a:hover {
+    color: #ecc02f;
+    text-decoration: underline;
+}
 .sidebar ul li a.selected {
-    color: #d73a49;
+    color: #bf1c2c;
     text-decoration: underline;
 }
-
+.dark.sidebar ul li a.selected {
+    color: #dd1e18;
+    text-decoration: underline;
+}
 .sidebar ul::-webkit-scrollbar {
     width: 8px;             /* 自定義滾動條寬度 */
 }
@@ -276,7 +285,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 /* 滾動條軌道（背景）的樣式 */
 body::-webkit-scrollbar-track {
-    background-color: transparent !important;;
+    background-color: #dddddf;
 }
 
 .sidebar > ul::-webkit-scrollbar {
