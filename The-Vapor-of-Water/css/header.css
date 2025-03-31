@@ -97,7 +97,8 @@ footer p:hover {
     footer p {
         font-size: 0.8rem;
         padding-bottom: 0.2em;
-        margin: 0.4em 0em;
+        margin-top: 0.4em;
+        margin-bottom: 0.6em;
     }
     .navbar-head {
         font-size: 2.2rem;

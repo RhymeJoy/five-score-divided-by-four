@@ -52,7 +52,6 @@ body {
     transition: 0.2s ease-in-out;
 }
 .container p {
-    min-height: 1em;
     text-align: justify;
     font-size: 1.75rem;
     font-family: LXGW WenKai Mono TC;
@@ -140,7 +139,7 @@ body {
     transition: 0.15s ease;
     margin-top: 9rem;
 }
-.line.dark {
+.dark .line {
     background-color: #eee;
 }
 
@@ -207,7 +206,6 @@ body {
         padding: 0.5em 0em;
     }
     .container p {
-        min-height: 0em;
         font-size: 1.25rem;
         padding: 0em 1.5em;
         margin: 2.5em 0em;
