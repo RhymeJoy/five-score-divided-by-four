@@ -20,10 +20,6 @@ function renderText(lang) {
     languageSelect.addEventListener("change", function() {
         const selectedLang = this.value;
         localStorage.setItem("selectedLanguage", selectedLang);
-        if (settingsModal.style.display === "block") {
-            localStorage.setItem("settingsOpen", "true");
-        }
-        location.reload();
     });
 
     // **刪除舊的 <p>**
