@@ -15,7 +15,7 @@ const chapters = [
     { title: "第十三章：接受自我",        href: "Chapter13.html" },
     { title: "第十四章：從長計議",        href: "Chapter14.html" },
     { title: "第十五章：直闖手稿",        href: "Chapter15.html" },
-    { title: "第十六章：手稿的意義",      href: "Chapter16.html" },
+    // { title: "第十六章：手稿的意義",      href: "Chapter16.html" },
     // { title: "第十七章：新朋友",   href: "Chapter17.html" },
     // { title: "第十八章：",   href: "Chapter18.html" },
     // { title: "第十九章：",   href: "Chapter19.html" },
