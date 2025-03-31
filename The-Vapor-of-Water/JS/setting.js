@@ -15,6 +15,17 @@ function renderText(lang) {
         return;
     }
 
+    window.location.hash = lang === "zh-TW" ? "#zh-TW" : "#zh-CN";
+
+    languageSelect.addEventListener("change", function() {
+        const selectedLang = this.value;
+        localStorage.setItem("selectedLanguage", selectedLang);
+        if (settingsModal.style.display === "block") {
+            localStorage.setItem("settingsOpen", "true");
+        }
+        location.reload();
+    });
+
     // **刪除舊的 <p>**
     let nextElement = title.nextSibling;
     while (nextElement) {
@@ -41,6 +52,7 @@ languageSelect.addEventListener("change", function() {
     renderText(selectedLang);
     updateSettingsText(selectedLang);
     updateButtonText(selectedLang);
+    window.location.hash = selectedLang === "zh-TW" ? "#zh-TW" : "#zh-CN";
 });
 
 // **更新設定窗口語言文本**
@@ -62,34 +74,55 @@ function updateSettingsText(lang) {
 function updateButtonText(lang) {
     const toggleSidebarButton = document.querySelector('.toggleSidebar');
     const SettingButton = document.querySelector('#settingsBtn');
+    const menutext = document.querySelector('menu');
     if (lang === "zh-TW") {
         toggleSidebarButton.textContent = '章節目錄';
+        menutext.textContent = '章節目錄';
         SettingButton.textContent = '設定';
     } else if (lang === "zh-CN") {
         toggleSidebarButton.textContent = '章节目录';
+        menutext.textContent = '章节目录';
         SettingButton.textContent = '设置';
     }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("selectedLanguage") || "zh-TW";
+    const urlHash = window.location.hash;
+    let savedLang = localStorage.getItem("selectedLanguage");
+
+    // 如果 URL hash 是 #zh-TW 或 #zh-CN，使用該語言
+    if (urlHash === "#zh-TW" || urlHash === "#zh-CN") {
+        savedLang = urlHash.replace("#", "");
+    }
+
+    // 若沒有 hash 或 localStorage 沒有語言設定，預設為 zh-TW
+    if (!savedLang) {
+        savedLang = "zh-TW";
+    }
+
     console.log("🌍 預設語言:", savedLang);
 
     languageSelect.value = savedLang;
+    window.location.hash = savedLang === "zh-TW" ? "#zh-TW" : "#zh-CN";
     renderText(savedLang);
     updateSettingsText(savedLang);
     updateButtonText(savedLang);
+
+    if (localStorage.getItem("settingsOpen") === "true") {
+        settingsModal.style.display = "block";
+        settingOverlay.style.display = "block";
+        localStorage.removeItem("settingsOpen"); // 🔥 只執行一次，避免影響後續行為
+    }
 });
 
 // **設定按鈕功能**
-settingsBtn.addEventListener("click", function () {
-    settingsModal.style.display = "block";
-    settingOverlay.style.display = "block";
-});
-
 function closeSettings() {
     settingsModal.style.display = "none";
     settingOverlay.style.display = "none";
+}
+function openSettings() {
+    settingsModal.style.display = "block";
+    settingOverlay.style.display = "block";
 }
 
 closeSettingsBtn.addEventListener("click", closeSettings);

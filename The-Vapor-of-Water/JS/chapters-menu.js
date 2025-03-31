@@ -15,7 +15,7 @@ const chapters = [
     { title: "第十三章：接受自我",        href: "Chapter13.html" },
     { title: "第十四章：從長計議",        href: "Chapter14.html" },
     { title: "第十五章：直闖手稿",        href: "Chapter15.html" },
-    // { title: "第十六章：手稿的意義",   href: "Chapter16.html" },
+    { title: "第十六章：手稿的意義",      href: "Chapter16.html" },
     // { title: "第十七章：新朋友",   href: "Chapter17.html" },
     // { title: "第十八章：",   href: "Chapter18.html" },
     // { title: "第十九章：",   href: "Chapter19.html" },
@@ -30,61 +30,92 @@ const chapters = [
 const chapterList = document.getElementById('chapterList');
 const chapterLinks = []; // 用於存儲所有章節鏈接
 
-// 動態插入章節
-chapters.forEach((chapter, index) => {
-    const listItem = document.createElement('li');
-    const link = document.createElement('a');
-    link.href = chapter.href;
-    
-    // 除「作者前言」外的章節加上編號
-    if (index > 0) {
-        link.textContent = `${index}.${chapter.title}`;
+document.addEventListener("DOMContentLoaded", function () {
+    // 檢查 URL 中的 hash 值
+    const urlHash = window.location.hash || "#zh-TW"; // 默認為 zh-TW
+    let savedLang = localStorage.getItem("selectedLanguage");
+
+    // 如果 URL hash 是 #zh-TW 或 #zh-CN，使用該語言
+    if (urlHash === "#zh-TW" || urlHash === "#zh-CN") {
+        savedLang = urlHash.replace("#", "");
+    }
+
+    // 若沒有 hash 或 localStorage 沒有語言設定，預設為 zh-TW
+    if (!savedLang) {
+        savedLang = "zh-TW";
+    }
+
+    console.log("🌍 預設語言:", savedLang);
+
+    // 設定語言選擇器的值
+    languageSelect.value = savedLang;
+
+    // 初次載入時設定 URL 的 hash
+    window.location.hash = savedLang === "zh-TW" ? "#zh-TW" : "#zh-CN";
+
+    renderText(savedLang);
+    updateSettingsText(savedLang);
+    updateButtonText(savedLang);
+
+    // 動態插入章節
+    chapters.forEach((chapter, index) => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        
+        // 加上語言 hash
+        const langHash = savedLang === "zh-TW" ? "#zh-TW" : "#zh-CN";
+        link.href = chapter.href + langHash;
+
+        // 除「作者前言」外的章節加上編號
+        if (index > 0) {
+            link.textContent = `${index}.${chapter.title}`;
+        } else {
+            link.textContent = chapter.title;
+        }
+
+        listItem.appendChild(link);
+        chapterList.appendChild(listItem);
+        chapterLinks.push(link); // 存入鏈接列表
+    });
+
+    // 根據當前 URL 高亮選中章節
+    const currentPath = window.location.pathname.split('/').pop(); // 獲取當前頁面文件名
+    chapterLinks.forEach(link => {
+        if (link.href.includes(currentPath)) {
+            link.classList.add('selected'); // 為當前頁面對應的鏈接添加選中樣式
+        }
+    });
+
+    // 選取上一章和下一章按鈕
+    const prevButton = document.getElementById('prevChapter');
+    const nextButton = document.getElementById('nextChapter');
+
+    // 找到當前章節的索引
+    const currentChapterIndex = chapters.findIndex(chapter => chapter.href === currentPath);
+
+    // 設置按鈕的跳轉邏輯和顯示狀態
+    if (currentChapterIndex > 0) {
+        // 當前章節不是第一章時，設定上一章按鈕的行為
+        prevButton.onclick = () => {
+            window.location.href = chapters[currentChapterIndex - 1].href + window.location.hash;
+        };
+        prevButton.style.visibility = 'visible';  // 顯示上一章按鈕
     } else {
-        link.textContent = chapter.title;
+        // 如果是第一章，隱藏「上一章」按鈕
+        prevButton.style.visibility = 'hidden';
     }
 
-    listItem.appendChild(link);
-    chapterList.appendChild(listItem);
-    chapterLinks.push(link); // 存入鏈接列表
-});
-
-// 根據當前 URL 高亮選中章節
-const currentPath = window.location.pathname.split('/').pop(); // 獲取當前頁面文件名
-chapterLinks.forEach(link => {
-    if (link.href.includes(currentPath)) {
-        link.classList.add('selected'); // 為當前頁面對應的鏈接添加選中樣式
+    if (currentChapterIndex < chapters.length - 1) {
+        // 當前章節不是最後一章時，設定下一章按鈕的行為
+        nextButton.onclick = () => {
+            window.location.href = chapters[currentChapterIndex + 1].href + window.location.hash;
+        };
+        nextButton.style.visibility = 'visible'; // 顯示下一章按鈕
+    } else {
+        // 如果是最後一章，隱藏「下一章」按鈕
+        nextButton.style.visibility = 'hidden';
     }
 });
-
-// 選取上一章和下一章按鈕
-const prevButton = document.getElementById('prevChapter');
-const nextButton = document.getElementById('nextChapter');
-
-// 找到當前章節的索引
-const currentChapterIndex = chapters.findIndex(chapter => chapter.href === currentPath);
-
-// 設置按鈕的跳轉邏輯和顯示狀態
-if (currentChapterIndex > 0) {
-    // 當前章節不是第一章時，設定上一章按鈕的行為
-    prevButton.onclick = () => {
-        window.location.href = chapters[currentChapterIndex - 1].href;
-    };
-    prevButton.style.visibility = 'visible';  // 顯示上一章按鈕
-} else {
-    // 如果是第一章，隱藏「上一章」按鈕
-    prevButton.style.visibility = 'hidden';
-}
-
-if (currentChapterIndex < chapters.length - 1) {
-    // 當前章節不是最後一章時，設定下一章按鈕的行為
-    nextButton.onclick = () => {
-        window.location.href = chapters[currentChapterIndex + 1].href;
-    };
-    nextButton.style.visibility = 'visible'; // 顯示下一章按鈕
-} else {
-    // 如果是最後一章，隱藏「下一章」按鈕
-    nextButton.style.visibility = 'hidden';
-}
 
 // footer
 const footer = document.createElement('footer');
