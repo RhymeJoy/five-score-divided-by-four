@@ -17,11 +17,12 @@
 .sidebar.active {
     transform: translateX(0);           /* 顯示時從左側滑入 */
 }
-.sidebar.dark {
+.dark.sidebar {
     background: linear-gradient(to right, rgba(0, 8, 101) 0%, rgba(1, 31, 79, 0.7) 100%);
     transition: background-color 0.25s ease-in-out; 
+    transition: transform 0.3s ease-out;
 }
-.sidebar.dark.active {
+.dark.sidebar.active {
     transform: translateX(0);
 }
 .sidebar menu {
