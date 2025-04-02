@@ -380,7 +380,7 @@ const paragraphs = {
         "梦瑄看着我，似乎明白我并不想谈太多，点了点头，并且轻声说：“好吧，那你休息吧，过一会就快到目的地了。”她又低下头去，继续忙着她的手机。",
         "我重新回到座位上，试图让自己放松，闭上眼睛，但那种不安的情绪依然挥之不去。我的思绪开始无意识地飘动，思考着这趟冒险究竟会带来什麽变化。随着时间的推移，机舱内逐渐安静下来，除了引擎的轰鸣声，剩下的只是沉默和偶尔的微弱气流。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>整个事件太长了，我会分两章写。</div>",
     ]

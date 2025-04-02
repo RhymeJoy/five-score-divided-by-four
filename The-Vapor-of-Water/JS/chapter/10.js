@@ -405,7 +405,7 @@ const paragraphs = {
         "听到梦瑄提的夸张建议，我不由得瞪了她一眼，心里忍不住有些无奈。",
         "“嘿嘿，还是算了。”梦瑄乾笑两声，然后一脚踩下油门，“不过现在最重要的，是我们要去哪里？”",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 弗雷泽河：原文为(Fraser River)，加拿大华人称为菲沙河，是加拿大卑诗省最长的河流、加拿大第十长河流。全长1,375公里，流域面积220,000平方公里，当中一小部份位于美国华盛顿州。发源自洛矶山，在温哥华和列治文之间流入太平洋。在机场边有一个浅滩叫做(Swishwash Island)，也是主角刚刚跨越的地方。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 西堤漫步小道：列治文西堤漫步小道(West Dyke Trail)是加拿大温哥华不列颠哥伦比亚省列治文(Richmond)一条观日落赏晚霞的最佳小道。这条长约5.5公裏的健行步道北起新地公园(Terra Nova Rural Park)，南至盖瑞岬公园(Garry Point Park)。漫步在这条步道上，可以近观深入到乔治亚湾(Georgia Strait)的水生植物茂密的鲟鱼浅滩(Sturgeon Bank)，也可以不时与各种不同的鸟类相遇。</div>",

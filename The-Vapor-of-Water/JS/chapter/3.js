@@ -272,7 +272,7 @@ const paragraphs = {
         "“或许……我们应该让他们亲眼看到。”雷飞沉声提议。",
         "我心一横，点了点头，说：“也许是时候了。”",
         
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>1. 第一天：可爱标誌、发色、小马耳朵、尾巴？</div>",
     ]

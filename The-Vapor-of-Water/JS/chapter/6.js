@@ -361,7 +361,7 @@ const paragraphs = {
         "欣韵的爸爸也简单但真诚地说道：“无论如何，记住我们都在你们身后，帮助你们，支持你们。想倾诉或有问题欢迎打电话回来。”",
         "此时的我们，虽然心中充满未知和不确定，但也能感受到来自家人和朋友的力量。或许，这就是面对困难和挑战时，最重要的支持。我们不再回头，准备好迈向接下来的冒险。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 第二天：血翅、变矮、垫脚尖、手指脚趾退化？</div>",
         "<div style='margin-bottom: -4rem;'>2.「新生羽」或「血羽」，英文对应的术语是「pin feather」。这是一种尚未完全成熟的羽毛，外被角蛋白构成的羽鞘包裹，内部有血管提供营养。随着羽毛的生长，外部的羽鞘会逐渐脱落，羽毛最终展开并成熟。</div>",

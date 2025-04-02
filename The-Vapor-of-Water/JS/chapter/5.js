@@ -358,7 +358,7 @@ const paragraphs = {
         "我妹忍不住笑了出声，虽然她也明白这并不是什麽轻松的话题。她拍拍我的肩膀：“没办法啦，与其一直担心，不如先做好最坏的准备吧。”",
         "我深吸了一口气，点了点头，努力让自己平静下来。无论如何，我们得面对这一切，即便心中还充满了疑问与不安。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>1. 梦想天马是我成立的一个工作室，要叫它公司也行。主要是在做动画部分的接案，2D和3D都有，偶尔接个平面设计也行。</div>",
     ]

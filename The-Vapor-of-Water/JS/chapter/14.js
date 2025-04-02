@@ -410,7 +410,7 @@ const paragraphs = {
         "我则转身走向客厅的另一端，轻声喊道：“雷飞，快过来吃点东西，待会准备行动了！”",
         "我们相视而笑，这一刻，虽然面对未知的挑战，但至少此刻的轻松与陪伴，让一切变得不那麽沉重。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备注：</div>",
         "<div style='margin-bottom: -4rem;'>1. 除了主角外，其他小马也在慢慢接受自我。</div>",
     ]

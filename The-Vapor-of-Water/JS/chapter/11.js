@@ -436,7 +436,7 @@ const paragraphs = {
         "不知过了多久，飞马的眼睛终于闭上了，无法再继续保持警觉。独角兽也在这时感觉到疲劳，坐了下来，轻轻地靠在一旁的大石上，闭上眼睛休息。",
         "这样静静地，两隻小马就这麽不知不觉地陷入了沉睡。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 度假村风格民宿：该民宿就落在弗雷泽河旁。这间度假屋位于加拿大不列颠哥伦比亚省的三角洲(Delta)市，距离架空列车桥港站(Bridgeport Skytrain Station)约23公里。<br>民宿拥有一个带有美丽景色的泳池和热水浴池，并提供汽车租赁服务。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 双人床：(Full Bed)，宽度约137公分(54英寸)，长度约191公分(75英寸)。适合单人使用，提供较宽敞的睡眠空间；对于身高较高的个人，可能会感到长度不足。</div>",

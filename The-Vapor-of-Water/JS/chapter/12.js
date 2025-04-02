@@ -562,7 +562,7 @@ const paragraphs = {
         "“众事皆忘，愚人之命！”",
         "“汝今败完，谁能阻我！”",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 层云堡(Stratusburg)：是破空和蒸气的家乡。这个地点的名字源自于层云(stratus clouds)，并且可能与法国的斯特拉斯堡(Strasbourg)有关。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 闪电天马学院(Wonderbolt Academy)：是一个新兵训练营，它坐落在一处山顶的平原上，拥有专用跑道以及其他的训练设施，还包括一些附属建筑，比如建在围绕在山顶周围的云上的食堂和办公室。学院裏还有另一处空中障碍训练航线以及配套的跑道。</div>",

@@ -221,7 +221,7 @@ const paragraphs = {
         "今天整整一天，我们都过得格外开心，让人捨不得结束。然而，时间不会为我们停留，我只能期待明天的马展带来更多惊喜。看了看时间，已经不早了！于是，我和欣韵洗漱完后，便相拥而眠，带着满满的回忆与期待，沉入甜美的梦乡。",
         "说不定还能梦到露娜公主...",
         
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 感谢友人提供自己的设定，给我做使用。角色多了，靠自己想，脑袋会炸掉。</div>",
         "<div style='margin-bottom: -4rem;'>2. Radio Garden是一个外国网站，几乎集合了全世界所有的电台频道。电台还是真真实实在当地live，并不是预录的。</div>",

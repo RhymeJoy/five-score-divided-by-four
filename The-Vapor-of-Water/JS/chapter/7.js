@@ -378,7 +378,7 @@ const paragraphs = {
         "我再次低头看了眼手中的手机，几条未读信息还在萤幕上闪烁。这些信息，大多来自家人和朋友，他们并不知晓我们此刻所面对的一切，也许，永远不会知道。",
         "“再忍一会儿，总会过去的。”我在心里对自己说，然后靠在椅背上，试图闭上眼睛，也许能抓住些许的梦境，至少让自己稍微放松片刻。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>1. 如果双发飞机从台湾（台中/RMQ）飞往加拿大（温哥华/YVR），并在日本（羽田/HND）与阿拉斯加（安克雷奇/ANC）分别加油，则总飞行时间会受到航线、加油时间、天气等因素影响。<br><br>纯飞行时间：约 11 小时！<br>加油与地勤处理时间：约 3 小时！<br>总旅行时间（不含其他延误）：约 14 小时！</div>",
     ]

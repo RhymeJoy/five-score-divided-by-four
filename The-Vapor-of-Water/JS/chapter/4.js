@@ -292,7 +292,7 @@ const paragraphs = {
         "卧室里的灯光柔和，外面的夜色安静，我和欣韵都沉浸在各自的思绪中，心情似乎也随着疲劳逐渐平静。虽然未来充满未知，但此刻，这份平静是那麽珍贵。",
         "我们闭上眼，让自己的呼吸逐渐放慢，最终进入了梦乡。",
         
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>1. 向家人甚至是父母坦白，是一个莫大的挑战，至少主角们已经跨过那道槛了！</div>",
     ]

@@ -360,7 +360,7 @@ const paragraphs = {
         "最后，提醒各位检查随身物品，确保没有遗漏。要是有人东西忘了带走，那就只能跟我一起回台湾了！”",
         "广播结束后，机舱内响起一阵轻笑声，气氛变得轻松了些。而我深吸了一口气，准备迎接即将展开的新旅程。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -4rem;'>1. Cinesite Vancouver：汇集了世界领先的视觉效果和动画工作室。凭藉一些最具标誌性的电影时刻,该集团是全球最热门的生产和返利地点的行业领先人才和技术的强国。<br><br>地址位于加拿大不列颠哥伦比亚省温哥华市大北道565号500单元。落在温哥华市的东南部，属于Mount Pleasant区域。<br><br>该地区以其多元文化和创意产业而闻名，拥有众多艺术画廊、咖啡馆和餐厅。此外也靠近温哥华的主要交通枢纽，方便前往市中心和国际机场或其他地区。</div>",
     ]

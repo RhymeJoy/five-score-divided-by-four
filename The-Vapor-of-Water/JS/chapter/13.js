@@ -429,7 +429,7 @@ const paragraphs = {
         "“好了，我们进屋休息吧！”梦瑄轻轻拉了拉我，笑着说道。",
         "我点了点头，跟随着她一起走向民宿的落地窗，心里的迷茫也渐渐随着这一刻的温暖而淡去。这一刻，无论外界如何变迁，我都知道，最重要的，是我们彼此之间那份无形的联繫。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 第三天：转变是完成了！25年的诅咒终于消逝，我还是那个我，既是小马也是人类。</div>",
         "<div style='margin-bottom: -4rem;'>2. 太平洋标准时间(PST)：所属时区是 -8.00 (西八区)。是在美国、加拿大、墨西哥西海岸靠近太平洋的地区使用。也被称为太平洋时区(Pacific Time，PT)、美国西岸时间。比台湾时间晚16小时！</div>",

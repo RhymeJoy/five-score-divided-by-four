@@ -360,7 +360,7 @@ const paragraphs = {
         "妈妈看了我一眼，满脸笑容地说：“那当然了！今天可是个特别的日子，你以为随便煮煮就能打发吗？”",
         "我低头顺势接过剩下的食材，心里暗自祈祷帽子没有松动，仅凭这麽一个微小的伪装，希望能撑过这场“特别的日子”。",
 
-        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字數：<span id='chineseCount'>0</span>｜</div>",
+        "<div class='line'></div><br><div style='text-align: center; margin-top: -0.5em; margin-bottom: -1em'>｜中文字数：<span id='chineseCount'>0</span>｜</div>",
         "<div style='margin: -1rem 0rem; font-weight: bold;'>备註：</div>",
         "<div style='margin-bottom: -1.5rem;'>1. 破空为Sky Stinger的译名。</div>",
         "<div style='margin-bottom: -1.5rem;'>2. 蒸气或水蒸气为Vapor Trail的译名。</div>",
